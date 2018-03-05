@@ -79,19 +79,24 @@
 
 
 
-<meta name="description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码配置内核编译内核和模块安装内核和模块修改grub启动配置文件">
+<meta name="description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码进入源码目录输入以下命令解压 1tar -xvf linux-4.15.6.tar.gz  配置内核清除配置文件和中间文件进入解压后的目录cd linux-4.15.6,输入make mrproper清除目录下所有配置文件和先前生成核心时产生的中间文件。 make clean与ma">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux内核编译与安装">
 <meta property="og:url" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/index.html">
 <meta property="og:site_name" content="Binary Road">
-<meta property="og:description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码配置内核编译内核和模块安装内核和模块修改grub启动配置文件">
+<meta property="og:description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码进入源码目录输入以下命令解压 1tar -xvf linux-4.15.6.tar.gz  配置内核清除配置文件和中间文件进入解压后的目录cd linux-4.15.6,输入make mrproper清除目录下所有配置文件和先前生成核心时产生的中间文件。 make clean与ma">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/内核下载.png">
-<meta property="og:updated_time" content="2018-03-05T13:37:54.347Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/解压源码.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/makemrproper.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/makemenuconfigerror.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/安装ncurses-dev.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/config.png">
+<meta property="og:updated_time" content="2018-03-05T14:03:29.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核编译与安装">
-<meta name="twitter:description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码配置内核编译内核和模块安装内核和模块修改grub启动配置文件">
+<meta name="twitter:description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码进入源码目录输入以下命令解压 1tar -xvf linux-4.15.6.tar.gz  配置内核清除配置文件和中间文件进入解压后的目录cd linux-4.15.6,输入make mrproper清除目录下所有配置文件和先前生成核心时产生的中间文件。 make clean与ma">
 <meta name="twitter:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/内核下载.png">
 
 
@@ -374,7 +379,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  62
+                  358
                 </span>
               
 
@@ -411,9 +416,32 @@
       
 
       
-        <h1 id="内核源码下载"><a href="#内核源码下载" class="headerlink" title="内核源码下载"></a>内核源码下载</h1><h2 id="下载内核源码"><a href="#下载内核源码" class="headerlink" title="下载内核源码"></a>下载内核源码</h2><p>前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。</p>
+        <h1 id="内核源码下载"><a href="#内核源码下载" class="headerlink" title="内核源码下载"></a>内核源码下载</h1><h2 id="下载内核源码"><a href="#下载内核源码" class="headerlink" title="下载内核源码"></a>下载内核源码</h2><p>前往<a href="www.kernel.org">www.kernel.org</a>下载内核源码，本文使用kernel 4.15.6。</p>
 <p><img src="内核下载.png" alt="内核源码下载"></p>
-<h2 id="解压源码"><a href="#解压源码" class="headerlink" title="解压源码"></a>解压源码</h2><h1 id="配置内核"><a href="#配置内核" class="headerlink" title="配置内核"></a>配置内核</h1><h1 id="编译内核和模块"><a href="#编译内核和模块" class="headerlink" title="编译内核和模块"></a>编译内核和模块</h1><h1 id="安装内核和模块"><a href="#安装内核和模块" class="headerlink" title="安装内核和模块"></a>安装内核和模块</h1><h1 id="修改grub启动配置文件"><a href="#修改grub启动配置文件" class="headerlink" title="修改grub启动配置文件"></a>修改grub启动配置文件</h1>
+<h2 id="解压源码"><a href="#解压源码" class="headerlink" title="解压源码"></a>解压源码</h2><p>进入源码目录输入以下命令解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf linux-4.15.6.tar.gz</span><br></pre></td></tr></table></figure>
+<p><img src="解压源码.png" alt="解压源码"></p>
+<h1 id="配置内核"><a href="#配置内核" class="headerlink" title="配置内核"></a>配置内核</h1><h2 id="清除配置文件和中间文件"><a href="#清除配置文件和中间文件" class="headerlink" title="清除配置文件和中间文件"></a>清除配置文件和中间文件</h2><p>进入解压后的目录<code>cd linux-4.15.6</code>,输入<code>make mrproper</code>清除目录下所有配置文件和先前生成核心时产生的中间文件。</p>
+<p><code>make clean</code>与<code>make mrproper</code>区别：</p>
+<ul>
+<li>make clean: remove most generated files but keep the config</li>
+<li>make mrproper: remove all generated files +config+ vaious backup files</li>
+</ul>
+<p><img src="makemrproper.png" alt="makemrproper"></p>
+<h2 id="配置内核-1"><a href="#配置内核-1" class="headerlink" title="配置内核"></a>配置内核</h2><p>以下几种方式可以进行配置：</p>
+<ul>
+<li><code>make config</code>是基于文本的传统配置界面；</li>
+<li><code>make menuconfig</code>是基于文本的选单式配置界面，是 是基于文本的选单式配置界面，是最为灵活的内核配置工具 最为灵活的内核配置工具；</li>
+<li><code>make xconfig</code>是基于图形窗口模式的配置界面，需要 是基于图形窗口模式的配置界面，需要xWindow 图形环境的支持 图形环境的支持；</li>
+<li><code>make oldconfig</code>用于在原来内核配置的基础上作修改。</li>
+</ul>
+<p>使用<code>make menuconfig</code>配置内核报错</p>
+<p><img src="makemenuconfigerror.png" alt=""></p>
+<p>输入<code>sudo apt-get install ncurses-dev</code> 安装ncurses。</p>
+<p><img src="安装ncurses-dev.png" alt=""></p>
+<p>再次输入<code>make menuconfig</code>显示配置界面，采用默认配置，双击Esc退出。</p>
+<p><img src="config.png" alt=""></p>
+<h1 id="编译内核和模块"><a href="#编译内核和模块" class="headerlink" title="编译内核和模块"></a>编译内核和模块</h1><h1 id="安装内核和模块"><a href="#安装内核和模块" class="headerlink" title="安装内核和模块"></a>安装内核和模块</h1><h1 id="修改grub启动配置文件"><a href="#修改grub启动配置文件" class="headerlink" title="修改grub启动配置文件"></a>修改grub启动配置文件</h1>
       
     </div>
     
@@ -637,7 +665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内核源码下载"><span class="nav-number">1.</span> <span class="nav-text">内核源码下载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载内核源码"><span class="nav-number">1.1.</span> <span class="nav-text">下载内核源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压源码"><span class="nav-number">1.2.</span> <span class="nav-text">解压源码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置内核"><span class="nav-number">2.</span> <span class="nav-text">配置内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译内核和模块"><span class="nav-number">3.</span> <span class="nav-text">编译内核和模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装内核和模块"><span class="nav-number">4.</span> <span class="nav-text">安装内核和模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改grub启动配置文件"><span class="nav-number">5.</span> <span class="nav-text">修改grub启动配置文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内核源码下载"><span class="nav-number">1.</span> <span class="nav-text">内核源码下载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载内核源码"><span class="nav-number">1.1.</span> <span class="nav-text">下载内核源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压源码"><span class="nav-number">1.2.</span> <span class="nav-text">解压源码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置内核"><span class="nav-number">2.</span> <span class="nav-text">配置内核</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#清除配置文件和中间文件"><span class="nav-number">2.1.</span> <span class="nav-text">清除配置文件和中间文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置内核-1"><span class="nav-number">2.2.</span> <span class="nav-text">配置内核</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译内核和模块"><span class="nav-number">3.</span> <span class="nav-text">编译内核和模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装内核和模块"><span class="nav-number">4.</span> <span class="nav-text">安装内核和模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改grub启动配置文件"><span class="nav-number">5.</span> <span class="nav-text">修改grub启动配置文件</span></a></li></ol></div>
             
 
           </div>
@@ -671,7 +699,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.0k</span>
+    <span title="Site words total count">3.3k</span>
   
 </div>
 
