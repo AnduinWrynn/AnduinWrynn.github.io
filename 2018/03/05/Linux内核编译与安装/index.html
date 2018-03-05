@@ -93,16 +93,16 @@
 <meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/makemenuconfigerror.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/安装ncurses-dev.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/config.png">
-<meta property="og:image" content="http://yoursite.com/makeerror缺少openssl.png">
-<meta property="og:image" content="http://yoursite.com/安装openss.png">
-<meta property="og:image" content="http://yoursite.com/make完成.png">
-<meta property="og:image" content="http://yoursite.com/安装modules.png">
-<meta property="og:image" content="http://yoursite.com/makeinstall完成.png">
-<meta property="og:image" content="http://yoursite.com/修改grub.png">
-<meta property="og:image" content="http://yoursite.com/修改grub文件.png">
-<meta property="og:image" content="http://yoursite.com/选择4.15.6启动.png">
-<meta property="og:image" content="http://yoursite.com/查看内核版本为4.15.6.png">
-<meta property="og:updated_time" content="2018-03-05T15:20:43.358Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/makeerror缺少openssl.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/安装openss.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/make完成.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/安装modules.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/makeinstall完成.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/修改grub.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/修改grub文件.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/选择4.15.6启动.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/05/Linux内核编译与安装/查看内核版本为4.15.6.png">
+<meta property="og:updated_time" content="2018-03-05T15:25:14.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核编译与安装">
 <meta name="twitter:description" content="内核源码下载下载内核源码前往www.kernel.org下载内核源码，本文使用kernel 4.15.6。  解压源码进入源码目录输入以下命令解压 1tar -xvf linux-4.15.6.tar.gz  配置内核清除配置文件和中间文件进入解压后的目录cd linux-4.15.6,输入make mrproper清除目录下所有配置文件和先前生成核心时产生的中间文件。 make clean与ma">
@@ -456,24 +456,24 @@
 <li><code>make bzImage</code>需要内核支持较多的外设和功能时，内核可能变得很大 需要内核支持较多的外设和功能时，内核可能变得很大，此时可以用此命令编译本内核产生压缩率更高的内核文件 ;</li>
 </ul>
 <p>本文使用<code>make</code>编译内核</p>
-<p><img src="/makeerror缺少openssl.png" alt="makeerror缺少openssl"></p>
+<p><img src="makeerror缺少openssl.png" alt="makeerror缺少openssl"></p>
 <p>输入<code>sudo apt-get install libssl-dev</code>安装ssl库</p>
-<p><img src="/安装openss.png" alt="安装openss"></p>
+<p><img src="安装openss.png" alt="安装openss"></p>
 <p>再次<code>make</code> 完成</p>
-<p><img src="/make完成.png" alt="make完成"></p>
+<p><img src="make完成.png" alt="make完成"></p>
 <h2 id="编译安装模块"><a href="#编译安装模块" class="headerlink" title="编译安装模块"></a>编译安装模块</h2><p>如果选择了可加载模块，编译完内核后，要对选择的模块进行编译</p>
 <p>输入<code>make modules</code>编译模块，<code>make modules_install</code>将模块安装到标准的模块目录中(模块在系统中的标准目录位于/lib/modules/x.y.z，后面的x.y.z 是版本号)</p>
-<p><img src="/安装modules.png" alt="安装modules"></p>
+<p><img src="安装modules.png" alt="安装modules"></p>
 <h1 id="安装内核"><a href="#安装内核" class="headerlink" title="安装内核"></a>安装内核</h1><p>输入<code>make install</code>安装内核</p>
-<p><img src="/makeinstall完成.png" alt="makeinstall完成"></p>
+<p><img src="makeinstall完成.png" alt="makeinstall完成"></p>
 <h1 id="修改grub启动配置文件"><a href="#修改grub启动配置文件" class="headerlink" title="修改grub启动配置文件"></a>修改grub启动配置文件</h1><h2 id="修改grub配置显示grub启动菜单"><a href="#修改grub配置显示grub启动菜单" class="headerlink" title="修改grub配置显示grub启动菜单"></a>修改grub配置显示grub启动菜单</h2><p>进入目录<code>cd /etc/default/grub</code>修改grub配置文件</p>
-<p><img src="/修改grub.png" alt="修改grub"></p>
+<p><img src="修改grub.png" alt="修改grub"></p>
 <p>将<code>GRUB_HIDDEN_TIMEOUT=0</code>前加#注释掉,并修改<code>GRUB_TIMEOUT=15</code></p>
-<p><img src="/修改grub文件.png" alt="修改grub文件"></p>
+<p><img src="修改grub文件.png" alt="修改grub文件"></p>
 <h2 id="选择新内核启动"><a href="#选择新内核启动" class="headerlink" title="选择新内核启动"></a>选择新内核启动</h2><p>在grub菜单选择<code>with Linux 4.15.6</code>内核启动</p>
-<p><img src="/选择4.15.6启动.png" alt="选择4.15.6启动"></p>
+<p><img src="选择4.15.6启动.png" alt="选择4.15.6启动"></p>
 <p>启动后输入<code>uname -r</code>查看内核版本为4.15.6</p>
-<p><img src="/查看内核版本为4.15.6.png" alt="查看内核版本为4.15.6"></p>
+<p><img src="查看内核版本为4.15.6.png" alt="查看内核版本为4.15.6"></p>
 
       
     </div>
