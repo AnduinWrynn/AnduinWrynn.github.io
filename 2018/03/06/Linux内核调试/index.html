@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306124205.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306172903.png">
-<meta property="og:updated_time" content="2018-03-06T09:30:25.744Z">
+<meta property="og:updated_time" content="2018-03-06T13:28:12.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核调试">
 <meta name="twitter:description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。 12345mkdir kDebugcd kDebugsudo cp /home/binkid/linuxkernel4.15.6/linux-4.15.6/vmlinux .sudo cp /home/binkid/linuxkernel4">
@@ -429,10 +429,9 @@
 <h2 id="下载和解压"><a href="#下载和解压" class="headerlink" title="下载和解压"></a>下载和解压</h2><p>到<a href="https://www.busybox.net/downloads/" target="_blank" rel="noopener">https://www.busybox.net/downloads/</a>中下载最新的busybox，并运行如下命令解压：<code>tar -jxvf busybox-1.26.2.tar.bz2</code></p>
 <p><img src="微信截图_20180306152119.png" alt="微信截图_20180306152119"></p>
 <h2 id="编译和安装"><a href="#编译和安装" class="headerlink" title="编译和安装"></a>编译和安装</h2><ol>
-<li>运行 <code>make menuconfig</code>进行配置</li>
-</ol>
+<li><p>运行 <code>make menuconfig</code>进行配置</p>
 <p><img src="微信截图_20180306153405-0321666384.png" alt="微信截图_20180306153405"></p>
-<ol>
+</li>
 <li>运行<code>make</code>进行编译</li>
 <li>运行<code>sudo make install</code>进行安装</li>
 <li>当前目录下的<code>busybox</code> 就是运行文件</li>
@@ -450,16 +449,12 @@
 </li>
 <li><p>使用busybox默认的设置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp –a /home/fengjie/busybox-1.26.2/examples/bootfloppy/etc/* /mnt/disk/etc</span><br><span class="line">sudo vi /mnt/disk/etc/init.d/rcS</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <p><img src="微信截图_20180306154902.png" alt="微信截图_20180306154902"></p>
-<ol>
+</li>
 <li><p>将下面内容拷贝到rcS里:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/sh</span><br><span class="line">/bin/mount -a</span><br><span class="line">/bin/mount -t  sysfs sysfs /sys</span><br><span class="line">/bin/mount -t tmpfs tmpfs /dev</span><br><span class="line">#动态添加虚拟机环境中的设备</span><br><span class="line">/sbin/mdev –s</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <p><img src="微信截图_20180306155737.png" alt="微信截图_20180306155737">    </p>
-<ol>
+</li>
 <li><p>做完上面对工作后，我们就可以卸载虚拟磁盘文件了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/binkid/kDebug/</span><br><span class="line">sudo umount /mnt/disk</span><br></pre></td></tr></table></figure>
 </li>
