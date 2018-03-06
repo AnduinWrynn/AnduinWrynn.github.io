@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。  安装dddGDB本身是一种命令行调试工具，但是通过DDD(data Display Debugger, 地址是https://www.gnu.org/software/ddd/)可以图形化界面(在文件有deb包，可以双击安装)  制作自己">
+<meta name="description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。 12345mkdir kDebugcd kDebugsudo cp /home/binkid/linuxkernel4.15.6/linux-4.15.6/vmlinux .sudo cp /home/binkid/linuxkernel4">
 <meta name="keywords" content="Linux,kernel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux内核调试">
 <meta property="og:url" content="http://yoursite.com/2018/03/06/Linux内核调试/index.html">
 <meta property="og:site_name" content="Binary Road">
-<meta property="og:description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。  安装dddGDB本身是一种命令行调试工具，但是通过DDD(data Display Debugger, 地址是https://www.gnu.org/software/ddd/)可以图形化界面(在文件有deb包，可以双击安装)  制作自己">
+<meta property="og:description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。 12345mkdir kDebugcd kDebugsudo cp /home/binkid/linuxkernel4.15.6/linux-4.15.6/vmlinux .sudo cp /home/binkid/linuxkernel4">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306123945.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306123945-0326545912.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306151814.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306152119.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306153405-0321666384.png">
@@ -95,11 +95,13 @@
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306154902.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306155737.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306124205.png">
-<meta property="og:updated_time" content="2018-03-06T08:13:31.800Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306172903.png">
+<meta property="og:updated_time" content="2018-03-06T09:30:25.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux内核调试">
-<meta name="twitter:description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。  安装dddGDB本身是一种命令行调试工具，但是通过DDD(data Display Debugger, 地址是https://www.gnu.org/software/ddd/)可以图形化界面(在文件有deb包，可以双击安装)  制作自己">
-<meta name="twitter:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306123945.png">
+<meta name="twitter:description" content="编译内核与备份编译安装4.15.6版本内核，创建kDebug文件夹，复制bzImage、vmlinux、initrd.img-4.1.38备份到kDebug。 12345mkdir kDebugcd kDebugsudo cp /home/binkid/linuxkernel4.15.6/linux-4.15.6/vmlinux .sudo cp /home/binkid/linuxkernel4">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/06/Linux内核调试/微信截图_20180306123945-0326545912.png">
 
 
 
@@ -381,7 +383,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  692
+                  889
                 </span>
               
 
@@ -397,7 +399,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  4
                 </span>
               
             </div>
@@ -419,7 +421,8 @@
 
       
         <h1 id="编译内核与备份"><a href="#编译内核与备份" class="headerlink" title="编译内核与备份"></a>编译内核与备份</h1><p>编译安装4.15.6版本内核，创建kDebug文件夹，复制<code>bzImage、vmlinux、initrd.img-4.1.38</code>备份到kDebug。</p>
-<p><img src="微信截图_20180306123945.png" alt="微信截图_20180306123945"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir kDebug</span><br><span class="line">cd kDebug</span><br><span class="line">sudo cp /home/binkid/linuxkernel4.15.6/linux-4.15.6/vmlinux .</span><br><span class="line">sudo cp /home/binkid/linuxkernel4.15.6/linux-4.15.6/arch/x86/boot/bzImage .</span><br><span class="line">cp /boot/initrd.img-4.15.6 .</span><br></pre></td></tr></table></figure>
+<p><img src="微信截图_20180306123945-0326545912.png" alt="微信截图_20180306123945"></p>
 <h1 id="安装ddd"><a href="#安装ddd" class="headerlink" title="安装ddd"></a>安装ddd</h1><p>GDB本身是一种命令行调试工具，但是通过DDD(data Display Debugger, 地址是<a href="https://www.gnu.org/software/ddd/" target="_blank" rel="noopener">https://www.gnu.org/software/ddd/</a>)可以图形化界面(在文件有deb包，可以双击安装)</p>
 <p><img src="微信截图_20180306151814.png" alt="微信截图_20180306151814"></p>
 <h1 id="制作自己的文件系统"><a href="#制作自己的文件系统" class="headerlink" title="制作自己的文件系统"></a>制作自己的文件系统</h1><h2 id="Busybox"><a href="#Busybox" class="headerlink" title="Busybox"></a>Busybox</h2><p>BusyBox是一个遵循GPL协议、以自由软件形式发行的应用程序。Busybox在单一的可执行文件中提供了精简的Unix工具集，可运行于多款POSIX环境的操作系统，例如Linux（包括Android）、Hurd、FreeBSD等等。由于BusyBox可执行文件尺寸小、并通常使用Linux内核，这使得它非常适合使用于嵌入式系统。此外，由于BusyBox功能强大，因此有些人将BusyBox称为“嵌入式Linux的瑞士军刀”。</p>
@@ -463,6 +466,14 @@
 </ol>
 <h1 id="安装qemu"><a href="#安装qemu" class="headerlink" title="安装qemu"></a>安装qemu</h1><p><img src="微信截图_20180306124205.png" alt="微信截图_20180306124205"></p>
 <h1 id="gdb-kgdb调试内核"><a href="#gdb-kgdb调试内核" class="headerlink" title="gdb + kgdb调试内核"></a>gdb + kgdb调试内核</h1><h2 id="qemu启动目标机"><a href="#qemu启动目标机" class="headerlink" title="qemu启动目标机"></a>qemu启动目标机</h2><p>使能kgdb可以在内核启动时增加使能参数，也可以在内核启动后<code>echo kgdboc</code>模块的参数来达到目的，这里我们采取在内核启动时增加启动参数<code>(kgdboc=ttyS0,115200 kgdbwait)</code>的方式，运行如下命令使用qemu运行自己编译的内核</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo qemu-system-x86_64 -kernel bzImage -initrd initrd.img-4.15.6 -append &quot;root=/dev/sda kgdboc=ttyS0,115200 kgdbwait&quot; -boot c -k en-us -m 2048 -serial tcp::4321,server</span><br></pre></td></tr></table></figure>
+<p><img src="1.png" alt="1"></p>
+<p>错误解决：发现开始创建的kDebug文件夹在home目录下，不在根目录下，根目录也存在kDebug，不是同一文件夹，复制<code>bzImage、vmlinux、initrd.img-4.1.38</code>到根目录kDebug，在根目录kDebug文件夹下再次运行命令</p>
+<h2 id="开发机中调试"><a href="#开发机中调试" class="headerlink" title="开发机中调试"></a>开发机中调试</h2><p>输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gdb vmlinux</span><br><span class="line">(gdb) target remote localhost:4321</span><br></pre></td></tr></table></figure>
+<p>连接成功后输入<code>（gdb）n</code>单步跟踪程序</p>
+<p><img src="微信截图_20180306172903.png" alt="微信截图_20180306172903"></p>
+<p>出错：<code>Cannot find bounds of current function</code>查阅资料后错误仍未解决。</p>
 
       
     </div>
@@ -689,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编译内核与备份"><span class="nav-number">1.</span> <span class="nav-text">编译内核与备份</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装ddd"><span class="nav-number">2.</span> <span class="nav-text">安装ddd</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作自己的文件系统"><span class="nav-number">3.</span> <span class="nav-text">制作自己的文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Busybox"><span class="nav-number">3.1.</span> <span class="nav-text">Busybox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载和解压"><span class="nav-number">3.2.</span> <span class="nav-text">下载和解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译和安装"><span class="nav-number">3.3.</span> <span class="nav-text">编译和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作文件系统"><span class="nav-number">3.4.</span> <span class="nav-text">制作文件系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装qemu"><span class="nav-number">4.</span> <span class="nav-text">安装qemu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gdb-kgdb调试内核"><span class="nav-number">5.</span> <span class="nav-text">gdb + kgdb调试内核</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#qemu启动目标机"><span class="nav-number">5.1.</span> <span class="nav-text">qemu启动目标机</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编译内核与备份"><span class="nav-number">1.</span> <span class="nav-text">编译内核与备份</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装ddd"><span class="nav-number">2.</span> <span class="nav-text">安装ddd</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作自己的文件系统"><span class="nav-number">3.</span> <span class="nav-text">制作自己的文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Busybox"><span class="nav-number">3.1.</span> <span class="nav-text">Busybox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载和解压"><span class="nav-number">3.2.</span> <span class="nav-text">下载和解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译和安装"><span class="nav-number">3.3.</span> <span class="nav-text">编译和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作文件系统"><span class="nav-number">3.4.</span> <span class="nav-text">制作文件系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装qemu"><span class="nav-number">4.</span> <span class="nav-text">安装qemu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gdb-kgdb调试内核"><span class="nav-number">5.</span> <span class="nav-text">gdb + kgdb调试内核</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#qemu启动目标机"><span class="nav-number">5.1.</span> <span class="nav-text">qemu启动目标机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发机中调试"><span class="nav-number">5.2.</span> <span class="nav-text">开发机中调试</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -723,7 +734,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.3k</span>
+    <span title="Site words total count">4.5k</span>
   
 </div>
 
