@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Binary Road">
 <meta property="og:description" content="Code PatternsThe methodExercises写一些C语言小程序，然后用汇编重写，不断缩小代码大小。无实际意义，因最新的编译器优化效率很高，但能深入理解汇编和程序。 Optimization levels and debug information典型的编译器有三种优化水平，0代表不优化 编译器还会产生一些debug信息在结果文件中 Some basicsA short intr">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-05T14:23:55.846Z">
+<meta property="og:updated_time" content="2018-03-07T12:49:06.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《RE for Beginners》笔记">
 <meta name="twitter:description" content="Code PatternsThe methodExercises写一些C语言小程序，然后用汇编重写，不断缩小代码大小。无实际意义，因最新的编译器优化效率很高，但能深入理解汇编和程序。 Optimization levels and debug information典型的编译器有三种优化水平，0代表不优化 编译器还会产生一些debug信息在结果文件中 Some basicsA short intr">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  901
+                  964
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  5
                 </span>
               
             </div>
@@ -455,13 +455,15 @@
 </li>
 </ol>
 <ol>
-<li><p>寄存器前加%，立即数前加%</p>
+<li><p>寄存器前加%，立即数前加$</p>
 </li>
 <li><p>操作后缀添加大小</p>
-<p>q — quad (64 bits)</p>
-<p>l — long (32 bits)</p>
-<p>w — word (16 bits)</p>
 <p>b — byte (8 bits)</p>
+<p>w — word (16 bits)</p>
+<p>l — long (32 bits)</p>
+<p>q — quad (64 bits)</p>
+</li>
+<li><p>地址描述方式AT&amp;T采用(),Intel采用[],寻址方式也不同。</p>
 </li>
 </ol>
 <p>MSVC:X86-64</p>
@@ -471,7 +473,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.string &quot;hello, world\n&quot;</span><br><span class="line">main:</span><br><span class="line">sub rsp, 8</span><br><span class="line">mov edi, OFFSET FLAT:.LC0 ; &quot;hello, world\n&quot;</span><br><span class="line">xor eax, eax ; number of vector registers passed</span><br><span class="line">call printf</span><br><span class="line">xor eax, eax</span><br><span class="line">add rsp, 8</span><br><span class="line">ret</span><br></pre></td></tr></table></figure>
 <p>The first 6 arguments are passed in the <strong>RDI , RSI , RDX , RCX , R8 , and R9 registers</strong>, and the rest—via the stack.</p>
 <p>64-bit 模式下，写入低32bit寄存器，高32bits被清零。</p>
-
+<h2 id="Function-prologue-and-epilogue"><a href="#Function-prologue-and-epilogue" class="headerlink" title="Function prologue and epilogue"></a>Function prologue and epilogue</h2><p>prologue:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">push ebp</span><br><span class="line">mov ebp, esp</span><br><span class="line">sub esp, X</span><br></pre></td></tr></table></figure>
+<p>epilogue:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov esp, ebp</span><br><span class="line">pop ebp</span><br><span class="line">ret 0</span><br></pre></td></tr></table></figure>
+<h2 id="stack"><a href="#stack" class="headerlink" title="stack"></a>stack</h2><p>主要理解push和pop，sp和bp</p>
+<h3 id="Save-the-function’s-return-address"><a href="#Save-the-function’s-return-address" class="headerlink" title="Save the function’s return address"></a>Save the function’s return address</h3>
       
     </div>
     
@@ -632,7 +639,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -643,7 +650,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -654,7 +661,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -701,7 +708,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Patterns"><span class="nav-number">1.</span> <span class="nav-text">Code Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-method"><span class="nav-number">1.1.</span> <span class="nav-text">The method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercises"><span class="nav-number">1.1.1.</span> <span class="nav-text">Exercises</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optimization-levels-and-debug-information"><span class="nav-number">1.1.2.</span> <span class="nav-text">Optimization levels and debug information</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-basics"><span class="nav-number">1.2.</span> <span class="nav-text">Some basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-short-introduction-to-the-CPU"><span class="nav-number">1.2.1.</span> <span class="nav-text">A short introduction to the CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numeral-Systems"><span class="nav-number">1.2.2.</span> <span class="nav-text">Numeral Systems</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#An-Empty-Function"><span class="nav-number">1.3.</span> <span class="nav-text">An Empty Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Returning-Values"><span class="nav-number">1.4.</span> <span class="nav-text">Returning Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-world"><span class="nav-number">1.5.</span> <span class="nav-text">Hello, world!</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Patterns"><span class="nav-number">1.</span> <span class="nav-text">Code Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-method"><span class="nav-number">1.1.</span> <span class="nav-text">The method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exercises"><span class="nav-number">1.1.1.</span> <span class="nav-text">Exercises</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optimization-levels-and-debug-information"><span class="nav-number">1.1.2.</span> <span class="nav-text">Optimization levels and debug information</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-basics"><span class="nav-number">1.2.</span> <span class="nav-text">Some basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-short-introduction-to-the-CPU"><span class="nav-number">1.2.1.</span> <span class="nav-text">A short introduction to the CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numeral-Systems"><span class="nav-number">1.2.2.</span> <span class="nav-text">Numeral Systems</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#An-Empty-Function"><span class="nav-number">1.3.</span> <span class="nav-text">An Empty Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Returning-Values"><span class="nav-number">1.4.</span> <span class="nav-text">Returning Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-world"><span class="nav-number">1.5.</span> <span class="nav-text">Hello, world!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-prologue-and-epilogue"><span class="nav-number">1.6.</span> <span class="nav-text">Function prologue and epilogue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stack"><span class="nav-number">1.7.</span> <span class="nav-text">stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Save-the-function’s-return-address"><span class="nav-number">1.7.1.</span> <span class="nav-text">Save the function’s return address</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -735,7 +742,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.5k</span>
+    <span title="Site words total count">7.4k</span>
   
 </div>
 
