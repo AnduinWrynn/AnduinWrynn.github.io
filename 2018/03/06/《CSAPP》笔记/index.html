@@ -87,7 +87,10 @@
 <meta property="og:site_name" content="Binary Road">
 <meta property="og:description" content="开此笔记，记录多次读却未读完的CSAPP将在这个3月底前读完，每天更新进度和笔记。  信息的表示与处理信息存储大多数计算机使用8位的块成为字节(byte),作为最小的可寻址内存单元。机器级程序将内存视为一个庞大的字节数组，成为虚拟内存(virtual memory),内存每个字节由唯一的数字来标识，成为地址，所有可能地址集合成为虚拟地址空间（virtual address space）。实际实现">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308151551.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307165438.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308153527.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308163427.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307205730.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307210319.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307212118.png">
@@ -95,11 +98,17 @@
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307213843.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307215157.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307224403.png">
-<meta property="og:updated_time" content="2018-03-08T01:19:24.202Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308093909.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308094444.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308095002.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308100342.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308104441.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308105554.png">
+<meta property="og:updated_time" content="2018-03-08T09:13:26.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSAPP》笔记">
 <meta name="twitter:description" content="开此笔记，记录多次读却未读完的CSAPP将在这个3月底前读完，每天更新进度和笔记。  信息的表示与处理信息存储大多数计算机使用8位的块成为字节(byte),作为最小的可寻址内存单元。机器级程序将内存视为一个庞大的字节数组，成为虚拟内存(virtual memory),内存每个字节由唯一的数字来标识，成为地址，所有可能地址集合成为虚拟地址空间（virtual address space）。实际实现">
-<meta name="twitter:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307165438.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180308151551.png">
 
 
 
@@ -381,7 +390,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  926
+                  1,812
                 </span>
               
 
@@ -397,7 +406,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  6
                 </span>
               
             </div>
@@ -422,24 +431,48 @@
 <p>开此笔记，记录多次读却未读完的CSAPP将在这个3月底前读完，每天更新进度和笔记。</p>
 </blockquote>
 <h1 id="信息的表示与处理"><a href="#信息的表示与处理" class="headerlink" title="信息的表示与处理"></a>信息的表示与处理</h1><h2 id="信息存储"><a href="#信息存储" class="headerlink" title="信息存储"></a>信息存储</h2><p>大多数计算机使用8位的块成为字节(byte),作为最小的可寻址内存单元。机器级程序将内存视为一个庞大的字节数组，成为虚拟内存(virtual memory),内存每个字节由唯一的数字来标识，成为地址，所有可能地址集合成为虚拟地址空间（virtual address space）。实际实现将众多存储设备和操作系统管理结合起来实现。</p>
+<h3 id="十六进制表示法"><a href="#十六进制表示法" class="headerlink" title="十六进制表示法"></a>十六进制表示法</h3><p><img src="微信截图_20180308151551.png" alt="微信截图_20180308151551"></p>
+<h3 id="字数据大小"><a href="#字数据大小" class="headerlink" title="字数据大小"></a>字数据大小</h3><p>字长：指明指针数据的标称大小(nominal size)，虚拟地址以一个字长编码，字长决定了虚拟地址空间的最大值。</p>
+<blockquote>
+<p>将程序区分为32位和64位程序，区别在于该程序是如何编译的，而不是其运行的机器类型。</p>
+</blockquote>
 <p><img src="微信截图_20180307165438.png" alt="微信截图_20180307165438"></p>
-<h3 id="大端与小端表示"><a href="#大端与小端表示" class="headerlink" title="大端与小端表示"></a>大端与小端表示</h3><ol>
-<li>网络传输过程中要根据网络标准进行转换</li>
-<li>机器代码表示</li>
-<li>编写规避正常的类型系统的程序时(??)</li>
-</ol>
-<h3 id="位运算与逻辑运算"><a href="#位运算与逻辑运算" class="headerlink" title="位运算与逻辑运算"></a>位运算与逻辑运算</h3><ul>
-<li>位运算：| 、&amp;、~(非)、^（异或）</li>
-<li>逻辑运算：||、&amp;&amp;、！</li>
+<h3 id="寻址和字节顺序"><a href="#寻址和字节顺序" class="headerlink" title="寻址和字节顺序"></a>寻址和字节顺序</h3><p>几乎所有机器，多字节对象都被存储为连续的字节序列，对象的地址为所使用字节中最小的地址。</p>
+<ul>
+<li><p>大端法(big-endian)：高字节的数据存放在低地址</p>
+</li>
+<li><p>小端法(little-endian)：低字节的数据存放在低地址</p>
+<p><img src="微信截图_20180308153527.png" alt="微信截图_20180308153527"></p>
+<p>大小端转换</p>
+</li>
+<li><p>网络传输过程中要根据网络标准进行转换</p>
+</li>
+<li><p>机器码表示，小端时，与常规书写方式经常相反</p>
+</li>
+<li><p>编写程序绕过正常的类型系统</p>
+</li>
+</ul>
+<h3 id="表示字符串"><a href="#表示字符串" class="headerlink" title="表示字符串"></a>表示字符串</h3><p>C语言中字符串被编码为以null(值为0)字符结尾的字符数组。</p>
+<h3 id="表示代码"><a href="#表示代码" class="headerlink" title="表示代码"></a>表示代码</h3><p>相同代码在不同机器上产生的机器码不同，不同机器类型使用不同且不兼容的指令和编码方式。因而二进制代码不兼容，很难移植。</p>
+<h3 id="布尔代数"><a href="#布尔代数" class="headerlink" title="布尔代数"></a>布尔代数</h3><p><img src="微信截图_20180308163427.png" alt="微信截图_20180308163427"></p>
+<h3 id="C语言中的位级运算"><a href="#C语言中的位级运算" class="headerlink" title="C语言中的位级运算"></a>C语言中的位级运算</h3><p>位运算：| 、&amp;、~(非)、^（异或）</p>
+<blockquote>
+<p>计算位级运算最好方法就是将十六进制转换成二进制计算后再转换为十六进制。</p>
+<p>通常用 X&amp;0xFFFF……计算X的掩码</p>
+</blockquote>
+<h3 id="C语言中的逻辑运算"><a href="#C语言中的逻辑运算" class="headerlink" title="C语言中的逻辑运算"></a>C语言中的逻辑运算</h3><p>逻辑运算：||、&amp;&amp;、！</p>
+<ul>
+<li>逻辑运算认为所有非零都为TRUE，0位FALSE，位级运算被限定为0或1时才和逻辑运算相同</li>
+<li>逻辑运算在对第一个参数求值就能确定表达式的值时，不对后续求值。</li>
+</ul>
+<h3 id="C语言中的移位运算"><a href="#C语言中的移位运算" class="headerlink" title="C语言中的移位运算"></a>C语言中的移位运算</h3><ul>
 <li>移位运算：&lt;&lt;(左移)、&gt;&gt;(右移)<ul>
 <li>算术右移：一般有符号数进行算数右移，即补最高有效位的值</li>
 <li>逻辑右移：一般无符号数进行逻辑右移，即补0</li>
 </ul>
 </li>
 </ul>
-<h2 id="整数运算"><a href="#整数运算" class="headerlink" title="整数运算"></a>整数运算</h2><p>待更新……</p>
-<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>待更新……</p>
-<h1 id="程序的机器表示"><a href="#程序的机器表示" class="headerlink" title="程序的机器表示"></a>程序的机器表示</h1><h2 id="程序编码"><a href="#程序编码" class="headerlink" title="程序编码"></a>程序编码</h2><p>机器级编程的两种抽象：</p>
+<h2 id="整数表示"><a href="#整数表示" class="headerlink" title="整数表示"></a>整数表示</h2><h3 id="整数数据类型"><a href="#整数数据类型" class="headerlink" title="整数数据类型"></a>整数数据类型</h3><h3 id="无符号数的编码"><a href="#无符号数的编码" class="headerlink" title="无符号数的编码"></a>无符号数的编码</h3><h3 id="补码编码"><a href="#补码编码" class="headerlink" title="补码编码"></a>补码编码</h3><h3 id="有符号数和无符号数之间的转换"><a href="#有符号数和无符号数之间的转换" class="headerlink" title="有符号数和无符号数之间的转换"></a>有符号数和无符号数之间的转换</h3><h3 id="C语言中的有符号数与无符号数"><a href="#C语言中的有符号数与无符号数" class="headerlink" title="C语言中的有符号数与无符号数"></a>C语言中的有符号数与无符号数</h3><h3 id="扩展一个数字的位表示"><a href="#扩展一个数字的位表示" class="headerlink" title="扩展一个数字的位表示"></a>扩展一个数字的位表示</h3><h3 id="截断数字"><a href="#截断数字" class="headerlink" title="截断数字"></a>截断数字</h3><h3 id="关于有符号数和无符号数的建议"><a href="#关于有符号数和无符号数的建议" class="headerlink" title="关于有符号数和无符号数的建议"></a>关于有符号数和无符号数的建议</h3><h2 id="整数运算"><a href="#整数运算" class="headerlink" title="整数运算"></a>整数运算</h2><h3 id="无符号加法"><a href="#无符号加法" class="headerlink" title="无符号加法"></a>无符号加法</h3><h3 id="补码加法"><a href="#补码加法" class="headerlink" title="补码加法"></a>补码加法</h3><h3 id="补码的非"><a href="#补码的非" class="headerlink" title="补码的非"></a>补码的非</h3><h3 id="无符号乘法"><a href="#无符号乘法" class="headerlink" title="无符号乘法"></a>无符号乘法</h3><h3 id="补码乘法"><a href="#补码乘法" class="headerlink" title="补码乘法"></a>补码乘法</h3><h3 id="乘以常数"><a href="#乘以常数" class="headerlink" title="乘以常数"></a>乘以常数</h3><h3 id="除以2的幂"><a href="#除以2的幂" class="headerlink" title="除以2的幂"></a>除以2的幂</h3><h3 id="关于整数运算的最后思考"><a href="#关于整数运算的最后思考" class="headerlink" title="关于整数运算的最后思考"></a>关于整数运算的最后思考</h3><h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><h3 id="二进制小数"><a href="#二进制小数" class="headerlink" title="二进制小数"></a>二进制小数</h3><h3 id="IEEE浮点表示"><a href="#IEEE浮点表示" class="headerlink" title="IEEE浮点表示"></a>IEEE浮点表示</h3><h3 id="数字实例"><a href="#数字实例" class="headerlink" title="数字实例"></a>数字实例</h3><h3 id="舍入"><a href="#舍入" class="headerlink" title="舍入"></a>舍入</h3><h3 id="浮点运算"><a href="#浮点运算" class="headerlink" title="浮点运算"></a>浮点运算</h3><h3 id="C语言中的浮点数"><a href="#C语言中的浮点数" class="headerlink" title="C语言中的浮点数"></a>C语言中的浮点数</h3><h1 id="程序的机器表示"><a href="#程序的机器表示" class="headerlink" title="程序的机器表示"></a>程序的机器表示</h1><h2 id="程序编码"><a href="#程序编码" class="headerlink" title="程序编码"></a>程序编码</h2><p>机器级编程的两种抽象：</p>
 <ul>
 <li>指令集架构(ISA):定义了机器级程序的格式和行为，定义了处理器状态、指令的格式、以及每条指令对状态的影响。</li>
 <li>机器级程序使用的内存地址是虚拟地址，提供的内存模型看上去是一个非常大的字节数组。<ul>
@@ -498,7 +531,31 @@
 <li>cltq相当于movslq，只是总以寄存器eax为源和rax为目的，不过编码更紧凑。</li>
 </ul>
 <h3 id="压入和弹出栈指令"><a href="#压入和弹出栈指令" class="headerlink" title="压入和弹出栈指令"></a>压入和弹出栈指令</h3><p><img src="微信截图_20180307224403.png" alt="微信截图_20180307224403"></p>
-<h1 id="处理器体系结构"><a href="#处理器体系结构" class="headerlink" title="处理器体系结构"></a>处理器体系结构</h1><h1 id="优化程序性能"><a href="#优化程序性能" class="headerlink" title="优化程序性能"></a>优化程序性能</h1><h1 id="存储器层次结构"><a href="#存储器层次结构" class="headerlink" title="存储器层次结构"></a>存储器层次结构</h1><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><h1 id="异常控制流"><a href="#异常控制流" class="headerlink" title="异常控制流"></a>异常控制流</h1><h1 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h1><h1 id="系统级I-O"><a href="#系统级I-O" class="headerlink" title="系统级I/O"></a>系统级I/O</h1><h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h1><h1 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h1>
+<p>pushq  %rbp  (1 byte)相当于一下两条指令(5 bytes)</p>
+<p><img src="微信截图_20180308093909.png" alt="微信截图_20180308093909"></p>
+<p>popq %rax 同理</p>
+<p><img src="微信截图_20180308094444.png" alt="微信截图_20180308094444"></p>
+<h2 id="算术和逻辑操作"><a href="#算术和逻辑操作" class="headerlink" title="算术和逻辑操作"></a>算术和逻辑操作</h2><p><img src="微信截图_20180308095002.png" alt="微信截图_20180308095002"></p>
+<h3 id="加载有效地址"><a href="#加载有效地址" class="headerlink" title="加载有效地址"></a>加载有效地址</h3><p>lea指令(load effective address):从内存读数据到寄存器，实际上根本没有引用内存，第一个操作数为内存引用，但是并不在指定位置读入数据，而是将有效地址写入目的寄存器。</p>
+<p>例如用于计算加法和乘法：</p>
+<p><img src="微信截图_20180308100342.png" alt="微信截图_20180308100342"></p>
+<h3 id="一元和二元操作"><a href="#一元和二元操作" class="headerlink" title="一元和二元操作"></a>一元和二元操作</h3><ul>
+<li>一元操作：一个操作数即是源也是目的</li>
+<li>二元操作 ：第二个操作数即是源也是目的(可以是寄存器、内存)，第一个为源操作数(可以是立即数、寄存器、内存)</li>
+</ul>
+<h3 id="移位操作"><a href="#移位操作" class="headerlink" title="移位操作"></a>移位操作</h3><p>移位量是一个立即数或单字节寄存器%cl中，即最高255位。</p>
+<ul>
+<li><p>由寄存器%cl确定时，移位操作对w位数据值进行操作，移位量由%cl寄存器的低位进行决定$2^m=w$,高位被忽略。</p>
+<p>例如：</p>
+<p><img src="微信截图_20180308104441.png" alt="微信截图_20180308104441"></p>
+</li>
+</ul>
+<h3 id="特殊的算术操作"><a href="#特殊的算术操作" class="headerlink" title="特殊的算术操作"></a>特殊的算术操作</h3><p><img src="微信截图_20180308105554.png" alt="微信截图_20180308105554"></p>
+<h2 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h2><h3 id="条件码"><a href="#条件码" class="headerlink" title="条件码"></a>条件码</h3><p>CF:  (Carry flag)最高位产生进位，可用来检查无符号数的溢出。</p>
+<p>ZF:  (Zero  flag)结果为0</p>
+<p>SF:  (Sign  flag)结果为负数</p>
+<p>OF:  (Overflow flag)结果导致补码溢出—正溢出或负溢出</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><h2 id="数组分配和访问"><a href="#数组分配和访问" class="headerlink" title="数组分配和访问"></a>数组分配和访问</h2><h2 id="异数的数据结构"><a href="#异数的数据结构" class="headerlink" title="异数的数据结构"></a>异数的数据结构</h2><h2 id="在机器级程序中将控制与数据结合"><a href="#在机器级程序中将控制与数据结合" class="headerlink" title="在机器级程序中将控制与数据结合"></a>在机器级程序中将控制与数据结合</h2><h2 id="浮点代码"><a href="#浮点代码" class="headerlink" title="浮点代码"></a>浮点代码</h2><h1 id="处理器体系结构"><a href="#处理器体系结构" class="headerlink" title="处理器体系结构"></a>处理器体系结构</h1><h1 id="优化程序性能"><a href="#优化程序性能" class="headerlink" title="优化程序性能"></a>优化程序性能</h1><h1 id="存储器层次结构"><a href="#存储器层次结构" class="headerlink" title="存储器层次结构"></a>存储器层次结构</h1><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><h1 id="异常控制流"><a href="#异常控制流" class="headerlink" title="异常控制流"></a>异常控制流</h1><h1 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h1><h1 id="系统级I-O"><a href="#系统级I-O" class="headerlink" title="系统级I/O"></a>系统级I/O</h1><h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h1><h1 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h1>
       
     </div>
     
@@ -726,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#信息的表示与处理"><span class="nav-number">1.</span> <span class="nav-text">信息的表示与处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#信息存储"><span class="nav-number">1.1.</span> <span class="nav-text">信息存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大端与小端表示"><span class="nav-number">1.1.1.</span> <span class="nav-text">大端与小端表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算与逻辑运算"><span class="nav-number">1.1.2.</span> <span class="nav-text">位运算与逻辑运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数运算"><span class="nav-number">1.2.</span> <span class="nav-text">整数运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数"><span class="nav-number">1.3.</span> <span class="nav-text">浮点数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序的机器表示"><span class="nav-number">2.</span> <span class="nav-text">程序的机器表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序编码"><span class="nav-number">2.1.</span> <span class="nav-text">程序编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据格式"><span class="nav-number">2.2.</span> <span class="nav-text">数据格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问信息"><span class="nav-number">2.3.</span> <span class="nav-text">访问信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作数指示符"><span class="nav-number">2.3.1.</span> <span class="nav-text">操作数指示符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据传送指令"><span class="nav-number">2.3.2.</span> <span class="nav-text">数据传送指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压入和弹出栈指令"><span class="nav-number">2.3.3.</span> <span class="nav-text">压入和弹出栈指令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#处理器体系结构"><span class="nav-number">3.</span> <span class="nav-text">处理器体系结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化程序性能"><span class="nav-number">4.</span> <span class="nav-text">优化程序性能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储器层次结构"><span class="nav-number">5.</span> <span class="nav-text">存储器层次结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">6.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常控制流"><span class="nav-number">7.</span> <span class="nav-text">异常控制流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚拟内存"><span class="nav-number">8.</span> <span class="nav-text">虚拟内存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统级I-O"><span class="nav-number">9.</span> <span class="nav-text">系统级I/O</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-number">10.</span> <span class="nav-text">网络编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发编程"><span class="nav-number">11.</span> <span class="nav-text">并发编程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#信息的表示与处理"><span class="nav-number">1.</span> <span class="nav-text">信息的表示与处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#信息存储"><span class="nav-number">1.1.</span> <span class="nav-text">信息存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#十六进制表示法"><span class="nav-number">1.1.1.</span> <span class="nav-text">十六进制表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字数据大小"><span class="nav-number">1.1.2.</span> <span class="nav-text">字数据大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寻址和字节顺序"><span class="nav-number">1.1.3.</span> <span class="nav-text">寻址和字节顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表示字符串"><span class="nav-number">1.1.4.</span> <span class="nav-text">表示字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表示代码"><span class="nav-number">1.1.5.</span> <span class="nav-text">表示代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔代数"><span class="nav-number">1.1.6.</span> <span class="nav-text">布尔代数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言中的位级运算"><span class="nav-number">1.1.7.</span> <span class="nav-text">C语言中的位级运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言中的逻辑运算"><span class="nav-number">1.1.8.</span> <span class="nav-text">C语言中的逻辑运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言中的移位运算"><span class="nav-number">1.1.9.</span> <span class="nav-text">C语言中的移位运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数表示"><span class="nav-number">1.2.</span> <span class="nav-text">整数表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数数据类型"><span class="nav-number">1.2.1.</span> <span class="nav-text">整数数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无符号数的编码"><span class="nav-number">1.2.2.</span> <span class="nav-text">无符号数的编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码编码"><span class="nav-number">1.2.3.</span> <span class="nav-text">补码编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有符号数和无符号数之间的转换"><span class="nav-number">1.2.4.</span> <span class="nav-text">有符号数和无符号数之间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言中的有符号数与无符号数"><span class="nav-number">1.2.5.</span> <span class="nav-text">C语言中的有符号数与无符号数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展一个数字的位表示"><span class="nav-number">1.2.6.</span> <span class="nav-text">扩展一个数字的位表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#截断数字"><span class="nav-number">1.2.7.</span> <span class="nav-text">截断数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于有符号数和无符号数的建议"><span class="nav-number">1.2.8.</span> <span class="nav-text">关于有符号数和无符号数的建议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数运算"><span class="nav-number">1.3.</span> <span class="nav-text">整数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无符号加法"><span class="nav-number">1.3.1.</span> <span class="nav-text">无符号加法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码加法"><span class="nav-number">1.3.2.</span> <span class="nav-text">补码加法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码的非"><span class="nav-number">1.3.3.</span> <span class="nav-text">补码的非</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无符号乘法"><span class="nav-number">1.3.4.</span> <span class="nav-text">无符号乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码乘法"><span class="nav-number">1.3.5.</span> <span class="nav-text">补码乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘以常数"><span class="nav-number">1.3.6.</span> <span class="nav-text">乘以常数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#除以2的幂"><span class="nav-number">1.3.7.</span> <span class="nav-text">除以2的幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于整数运算的最后思考"><span class="nav-number">1.3.8.</span> <span class="nav-text">关于整数运算的最后思考</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数"><span class="nav-number">1.4.</span> <span class="nav-text">浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制小数"><span class="nav-number">1.4.1.</span> <span class="nav-text">二进制小数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IEEE浮点表示"><span class="nav-number">1.4.2.</span> <span class="nav-text">IEEE浮点表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字实例"><span class="nav-number">1.4.3.</span> <span class="nav-text">数字实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#舍入"><span class="nav-number">1.4.4.</span> <span class="nav-text">舍入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点运算"><span class="nav-number">1.4.5.</span> <span class="nav-text">浮点运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言中的浮点数"><span class="nav-number">1.4.6.</span> <span class="nav-text">C语言中的浮点数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序的机器表示"><span class="nav-number">2.</span> <span class="nav-text">程序的机器表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序编码"><span class="nav-number">2.1.</span> <span class="nav-text">程序编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据格式"><span class="nav-number">2.2.</span> <span class="nav-text">数据格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问信息"><span class="nav-number">2.3.</span> <span class="nav-text">访问信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作数指示符"><span class="nav-number">2.3.1.</span> <span class="nav-text">操作数指示符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据传送指令"><span class="nav-number">2.3.2.</span> <span class="nav-text">数据传送指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压入和弹出栈指令"><span class="nav-number">2.3.3.</span> <span class="nav-text">压入和弹出栈指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术和逻辑操作"><span class="nav-number">2.4.</span> <span class="nav-text">算术和逻辑操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加载有效地址"><span class="nav-number">2.4.1.</span> <span class="nav-text">加载有效地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一元和二元操作"><span class="nav-number">2.4.2.</span> <span class="nav-text">一元和二元操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移位操作"><span class="nav-number">2.4.3.</span> <span class="nav-text">移位操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊的算术操作"><span class="nav-number">2.4.4.</span> <span class="nav-text">特殊的算术操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制"><span class="nav-number">2.5.</span> <span class="nav-text">控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件码"><span class="nav-number">2.5.1.</span> <span class="nav-text">条件码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.6.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组分配和访问"><span class="nav-number">2.7.</span> <span class="nav-text">数组分配和访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异数的数据结构"><span class="nav-number">2.8.</span> <span class="nav-text">异数的数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在机器级程序中将控制与数据结合"><span class="nav-number">2.9.</span> <span class="nav-text">在机器级程序中将控制与数据结合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点代码"><span class="nav-number">2.10.</span> <span class="nav-text">浮点代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#处理器体系结构"><span class="nav-number">3.</span> <span class="nav-text">处理器体系结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化程序性能"><span class="nav-number">4.</span> <span class="nav-text">优化程序性能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储器层次结构"><span class="nav-number">5.</span> <span class="nav-text">存储器层次结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">6.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常控制流"><span class="nav-number">7.</span> <span class="nav-text">异常控制流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚拟内存"><span class="nav-number">8.</span> <span class="nav-text">虚拟内存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统级I-O"><span class="nav-number">9.</span> <span class="nav-text">系统级I/O</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-number">10.</span> <span class="nav-text">网络编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发编程"><span class="nav-number">11.</span> <span class="nav-text">并发编程</span></a></li></ol></div>
             
 
           </div>
@@ -760,7 +817,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.4k</span>
+    <span title="Site words total count">8.3k</span>
   
 </div>
 
