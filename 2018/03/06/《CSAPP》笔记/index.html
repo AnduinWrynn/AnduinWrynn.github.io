@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307213843.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307215157.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/06/《CSAPP》笔记/微信截图_20180307224403.png">
-<meta property="og:updated_time" content="2018-03-07T14:45:00.680Z">
+<meta property="og:updated_time" content="2018-03-08T01:19:24.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSAPP》笔记">
 <meta name="twitter:description" content="开此笔记，记录多次读却未读完的CSAPP将在这个3月底前读完，每天更新进度和笔记。  信息的表示与处理信息存储大多数计算机使用8位的块成为字节(byte),作为最小的可寻址内存单元。机器级程序将内存视为一个庞大的字节数组，成为虚拟内存(virtual memory),内存每个字节由唯一的数字来标识，成为地址，所有可能地址集合成为虚拟地址空间（virtual address space）。实际实现">
@@ -443,7 +443,7 @@
 <ul>
 <li>指令集架构(ISA):定义了机器级程序的格式和行为，定义了处理器状态、指令的格式、以及每条指令对状态的影响。</li>
 <li>机器级程序使用的内存地址是虚拟地址，提供的内存模型看上去是一个非常大的字节数组。<ul>
-<li>X86-64虚拟地址采用64位，目前实现时地址高16位必须设置为0，所以实际能指定$2^{48}$或64TB范围*</li>
+<li>X86-64虚拟地址采用64位，目前实现时地址高16位必须设置为0，所以实际能指定$2^{48}$或64TB范围。</li>
 </ul>
 </li>
 </ul>
@@ -567,8 +567,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/07/《0day安全》笔记/" rel="prev" title="0day安全笔记">
-                0day安全笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/07/《0day安全》笔记/" rel="prev" title="《0day安全》笔记">
+                《0day安全》笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1119,6 +1119,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
