@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307102706.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307104218.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307104758.png">
-<meta property="og:updated_time" content="2018-03-08T01:14:33.999Z">
+<meta property="og:updated_time" content="2018-03-08T12:14:46.982Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《0day安全》笔记">
 <meta name="twitter:description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  堆溢出利用堆的特性 堆是一种在程序运行时动态分配的内存。所谓动态是指所需内存的">
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,709
+                  1,713
                 </span>
               
 
@@ -487,6 +487,7 @@
 <p>综上所述，Windows 的堆管理策略兼顾了内存合理使用、分配效率等多方面的因素。</p>
 <h3 id="windows堆分配函数"><a href="#windows堆分配函数" class="headerlink" title="windows堆分配函数"></a>windows堆分配函数</h3><p>所有的堆分配函数最终都将使用位于 ntdll.dll 中的 RtlAllocateHeap()函数进行分配，这个函数也是在用户态能够看到的最底层的堆分配函数。所谓万变不离其宗，这个“宗”就是RtlAllocateHeap()。因此，研究 Windows 堆只要研究这个函数即可。</p>
 <p><img src="微信截图_20180307104758.png" alt="微信截图_20180307104758"></p>
+<p>未完待续……………</p>
 
       
     </div>
@@ -751,7 +752,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.3k</span>
+    <span title="Site words total count">8.8k</span>
   
 </div>
 
