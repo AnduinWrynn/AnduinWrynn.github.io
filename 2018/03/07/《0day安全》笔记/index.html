@@ -79,25 +79,27 @@
 
 
 
-<meta name="description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  堆溢出利用堆的特性 堆是一种在程序运行时动态分配的内存。所谓动态是指所需内存的">
+<meta name="description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  内存攻击技术S.E.HS.E.H 即异常处理结构体（Structure Exc">
 <meta name="keywords" content="读书笔记,漏洞">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《0day安全》笔记">
 <meta property="og:url" content="http://yoursite.com/2018/03/07/《0day安全》笔记/index.html">
 <meta property="og:site_name" content="Binary Road">
-<meta property="og:description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  堆溢出利用堆的特性 堆是一种在程序运行时动态分配的内存。所谓动态是指所需内存的">
+<meta property="og:description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  内存攻击技术S.E.HS.E.H 即异常处理结构体（Structure Exc">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180314102706.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307101104.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307101452.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307102310.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307102706.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307104218.png">
 <meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307104758.png">
-<meta property="og:updated_time" content="2018-03-08T12:14:46.982Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180314095520.png">
+<meta property="og:updated_time" content="2018-03-14T03:18:46.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《0day安全》笔记">
-<meta name="twitter:description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  堆溢出利用堆的特性 堆是一种在程序运行时动态分配的内存。所谓动态是指所需内存的">
-<meta name="twitter:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180307101104.png">
+<meta name="twitter:description" content="漏洞利用原理(初级)PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  内存攻击技术S.E.HS.E.H 即异常处理结构体（Structure Exc">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/07/《0day安全》笔记/微信截图_20180314102706.png">
 
 
 
@@ -379,7 +381,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,713
+                  1,940
                 </span>
               
 
@@ -395,7 +397,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  6
+                  7
                 </span>
               
             </div>
@@ -422,6 +424,8 @@
 <li>.idata 可执行文件所使用的动态链接库等外来函数与文件的信息。</li>
 <li>.rsrc  存放程序的资源，如图标、菜单等。</li>
 </ul>
+<h2 id="内存攻击技术"><a href="#内存攻击技术" class="headerlink" title="内存攻击技术"></a>内存攻击技术</h2><h3 id="S-E-H"><a href="#S-E-H" class="headerlink" title="S.E.H"></a>S.E.H</h3><p>S.E.H 即异常处理结构体（Structure Exception Handler）,它是 Windows 异常处理机制所采用的重要数据结构。每个 S.E.H 包含两个 DWORD 指针：S.E.H 链表指针和异常处理函数句柄，共 8 个字节</p>
+<p><img src="微信截图_20180314102706.png" alt="微信截图_20180314102706"></p>
 <h2 id="堆溢出利用"><a href="#堆溢出利用" class="headerlink" title="堆溢出利用"></a>堆溢出利用</h2><h3 id="堆的特性"><a href="#堆的特性" class="headerlink" title="堆的特性"></a>堆的特性</h3><ol>
 <li>堆是一种在程序运行时动态分配的内存。所谓动态是指所需内存的大小在程序设计时不能预先决定，需要在程序运行时参考用户的反馈。</li>
 <li>堆在使用时需要程序员用专用函数进行申请，如 C 语言中的 malloc 等函数、C++中的new 函数等都是最常见的分配堆内存的函数。堆内存申请有可能成功，也有可能失败，这与申请内存的大小、机器性能和当前运行环境有关。</li>
@@ -485,8 +489,17 @@
 <li>快表只有 4 项，很容易被填满，因此空表也是被频繁使用的。</li>
 </ol>
 <p>综上所述，Windows 的堆管理策略兼顾了内存合理使用、分配效率等多方面的因素。</p>
-<h3 id="windows堆分配函数"><a href="#windows堆分配函数" class="headerlink" title="windows堆分配函数"></a>windows堆分配函数</h3><p>所有的堆分配函数最终都将使用位于 ntdll.dll 中的 RtlAllocateHeap()函数进行分配，这个函数也是在用户态能够看到的最底层的堆分配函数。所谓万变不离其宗，这个“宗”就是RtlAllocateHeap()。因此，研究 Windows 堆只要研究这个函数即可。</p>
-<p><img src="微信截图_20180307104758.png" alt="微信截图_20180307104758"></p>
+<h3 id="windows堆分配函数"><a href="#windows堆分配函数" class="headerlink" title="windows堆分配函数"></a>windows堆分配函数</h3><p>所有的堆分配函数最终都将使用位于 ntdll.dll 中的 RtlAllocateHeap()函数进行分配，这个函数也是在用户态能够看到的最底层的堆分配函数。所谓万变不离其宗，这个“宗”就是RtlAllocateHeap()。因此，研究 Windows 堆只要研究这个函数即可。<br><img src="微信截图_20180307104758.png" alt="微信截图_20180307104758"></p>
+<h1 id="漏洞利用原理-高级"><a href="#漏洞利用原理-高级" class="headerlink" title="漏洞利用原理(高级)"></a>漏洞利用原理(高级)</h1><h2 id="GS"><a href="#GS" class="headerlink" title="GS"></a>GS</h2><p>在栈帧中压入security cookie，也叫”canery”， .data中存入副本，函数返回时进行验证操作security check，检查两者是否相等，若不相等，系统进入异常处理流程，函数不会返回。</p>
+<p><img src="微信截图_20180314095520.png" alt="微信截图_20180314095520"></p>
+<p>为了性能例外情况：</p>
+<ol>
+<li>函数不包含缓冲区。</li>
+<li>函数被定义为具有变量参数列表</li>
+<li>函数使用无保护的关键字标记。</li>
+<li>函数在第一个语句中包含内嵌汇编代码。</li>
+<li>缓冲区不是 8 字节类型且大小不大于 4 个字节。</li>
+</ol>
 <p>未完待续……………</p>
 
       
@@ -649,7 +662,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -718,7 +731,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#漏洞利用原理-初级"><span class="nav-number">1.</span> <span class="nav-text">漏洞利用原理(初级)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PE文件格式"><span class="nav-number">1.1.</span> <span class="nav-text">PE文件格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要块-section"><span class="nav-number">1.1.1.</span> <span class="nav-text">主要块(section)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆溢出利用"><span class="nav-number">1.2.</span> <span class="nav-text">堆溢出利用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆的特性"><span class="nav-number">1.2.1.</span> <span class="nav-text">堆的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆内存与栈内存比较"><span class="nav-number">1.2.2.</span> <span class="nav-text">堆内存与栈内存比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆数据结构"><span class="nav-number">1.3.</span> <span class="nav-text">堆数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆的三种操作"><span class="nav-number">1.3.1.</span> <span class="nav-text">堆的三种操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows中分配释放算法"><span class="nav-number">1.3.2.</span> <span class="nav-text">windows中分配释放算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows堆分配函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">windows堆分配函数</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#漏洞利用原理-初级"><span class="nav-number">1.</span> <span class="nav-text">漏洞利用原理(初级)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PE文件格式"><span class="nav-number">1.1.</span> <span class="nav-text">PE文件格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要块-section"><span class="nav-number">1.1.1.</span> <span class="nav-text">主要块(section)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存攻击技术"><span class="nav-number">1.2.</span> <span class="nav-text">内存攻击技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-E-H"><span class="nav-number">1.2.1.</span> <span class="nav-text">S.E.H</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆溢出利用"><span class="nav-number">1.3.</span> <span class="nav-text">堆溢出利用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆的特性"><span class="nav-number">1.3.1.</span> <span class="nav-text">堆的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆内存与栈内存比较"><span class="nav-number">1.3.2.</span> <span class="nav-text">堆内存与栈内存比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆数据结构"><span class="nav-number">1.4.</span> <span class="nav-text">堆数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆的三种操作"><span class="nav-number">1.4.1.</span> <span class="nav-text">堆的三种操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows中分配释放算法"><span class="nav-number">1.4.2.</span> <span class="nav-text">windows中分配释放算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows堆分配函数"><span class="nav-number">1.4.3.</span> <span class="nav-text">windows堆分配函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#漏洞利用原理-高级"><span class="nav-number">2.</span> <span class="nav-text">漏洞利用原理(高级)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GS"><span class="nav-number">2.1.</span> <span class="nav-text">GS</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -752,7 +765,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.0k</span>
+    <span title="Site words total count">9.4k</span>
   
 </div>
 
