@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="读书笔记,Exploit," />
+  <meta name="keywords" content="读书笔记,漏洞," />
 
 
 
@@ -79,20 +79,31 @@
 
 
 
-<meta name="description" content="程序基础知识X86汇编AX(Accumulator) BX(Base register) CX(Counter) DX(Data) SP(Stack Pointer) BP(Base Pointer) SI(Source Index) DI(Destination Index) IP(Instruction Pointer) EFLAGS register  Little-Endian就是低位字节">
-<meta name="keywords" content="读书笔记,Exploit">
+<meta name="description" content="漏洞原理PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  栈溢出定位shellcode几种方法 覆盖返回地址为shellcode开始的地址（需要查找">
+<meta name="keywords" content="读书笔记,漏洞">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《Hacking:The Art of Exploitation》笔记">
-<meta property="og:url" content="http://yoursite.com/2018/02/18/《Hacking：The Art of Exploitation》笔记/index.html">
+<meta property="og:title" content="《0day安全》笔记">
+<meta property="og:url" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/index.html">
 <meta property="og:site_name" content="Binary Road">
-<meta property="og:description" content="程序基础知识X86汇编AX(Accumulator) BX(Base register) CX(Counter) DX(Data) SP(Stack Pointer) BP(Base Pointer) SI(Source Index) DI(Destination Index) IP(Instruction Pointer) EFLAGS register  Little-Endian就是低位字节">
+<meta property="og:description" content="漏洞原理PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  栈溢出定位shellcode几种方法 覆盖返回地址为shellcode开始的地址（需要查找">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2018/02/18/《Hacking：The%20Art%20of%20Exploitation》笔记/memoryLayoutC.jpg">
-<meta property="og:updated_time" content="2018-03-05T14:23:40.704Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/1522142427080.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/1522142399591.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/1522142692246.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/1522200890824.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180307101104.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180307101452.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180307102310.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180307102706.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180307104218.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180307104758.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180314102706.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/微信截图_20180314095520.png">
+<meta property="og:updated_time" content="2018-03-28T08:59:12.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《Hacking:The Art of Exploitation》笔记">
-<meta name="twitter:description" content="程序基础知识X86汇编AX(Accumulator) BX(Base register) CX(Counter) DX(Data) SP(Stack Pointer) BP(Base Pointer) SI(Source Index) DI(Destination Index) IP(Instruction Pointer) EFLAGS register  Little-Endian就是低位字节">
-<meta name="twitter:image" content="http://yoursite.com/2018/02/18/《Hacking：The%20Art%20of%20Exploitation》笔记/memoryLayoutC.jpg">
+<meta name="twitter:title" content="《0day安全》笔记">
+<meta name="twitter:description" content="漏洞原理PE文件格式主要块(section) .text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。 .data  初始化的数据块，如宏定义、全局变量、静态变量等。 .idata 可执行文件所使用的动态链接库等外来函数与文件的信息。 .rsrc  存放程序的资源，如图标、菜单等。  栈溢出定位shellcode几种方法 覆盖返回地址为shellcode开始的地址（需要查找">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/1522142427080.png">
 
 
 
@@ -122,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/18/《Hacking：The Art of Exploitation》笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/"/>
 
 
 
 
 
-  <title>《Hacking:The Art of Exploitation》笔记 | Binary Road</title>
+  <title>《0day安全》笔记 | Binary Road</title>
   
 
 
@@ -265,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/18/《Hacking：The Art of Exploitation》笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/读书笔记/《0day安全》笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anduin">
@@ -282,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《Hacking:The Art of Exploitation》笔记</h1>
+          <h1 class="post-title" itemprop="name headline">《0day安全》笔记</h1>
         
 
         <div class="post-meta">
@@ -294,8 +305,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-18T22:48:44+08:00">
-                2018-02-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-07T10:04:27+08:00">
+                2018-03-07
               </time>
             
 
@@ -335,8 +346,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/18/《Hacking：The Art of Exploitation》笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/02/18/《Hacking：The Art of Exploitation》笔记/" itemprop="commentsCount"></span>
+                <a href="/2018/03/07/读书笔记/《0day安全》笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/07/读书笔记/《0day安全》笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -344,7 +355,7 @@
 
           
           
-             <span id="/2018/02/18/《Hacking：The Art of Exploitation》笔记/" class="leancloud_visitors" data-flag-title="《Hacking:The Art of Exploitation》笔记">
+             <span id="/2018/03/07/读书笔记/《0day安全》笔记/" class="leancloud_visitors" data-flag-title="《0day安全》笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,7 +385,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,402
+                  2,108
                 </span>
               
 
@@ -411,96 +422,103 @@
       
 
       
-        <h1 id="程序基础知识"><a href="#程序基础知识" class="headerlink" title="程序基础知识"></a>程序基础知识</h1><h2 id="X86汇编"><a href="#X86汇编" class="headerlink" title="X86汇编"></a>X86汇编</h2><p>AX(Accumulator)</p>
-<p>BX(Base register)</p>
-<p>CX(Counter)</p>
-<p>DX(Data)</p>
-<p>SP(Stack Pointer)</p>
-<p>BP(Base Pointer)</p>
-<p>SI(Source Index)</p>
-<p>DI(Destination Index)</p>
-<p>IP(Instruction Pointer)</p>
-<p>EFLAGS register</p>
-<ul>
-<li>Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。</li>
-<li>Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。</li>
+        <h1 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h1><h2 id="PE文件格式"><a href="#PE文件格式" class="headerlink" title="PE文件格式"></a>PE文件格式</h2><h3 id="主要块-section"><a href="#主要块-section" class="headerlink" title="主要块(section)"></a>主要块(section)</h3><ul>
+<li>.text  由编译器产生，存放着二进制的机器代码，也是我们反汇编和调试的对象。</li>
+<li>.data  初始化的数据块，如宏定义、全局变量、静态变量等。</li>
+<li>.idata 可执行文件所使用的动态链接库等外来函数与文件的信息。</li>
+<li>.rsrc  存放程序的资源，如图标、菜单等。</li>
 </ul>
-<p>一般操作系统都是小端，而通讯协议是大端的。</p>
-<h2 id="gdb命令"><a href="#gdb命令" class="headerlink" title="gdb命令"></a>gdb命令</h2><ol>
-<li>o Display in octal.</li>
-<li>x Display in hexadecimal.</li>
-<li>u Display in unsigned, standard base-10 decimal.</li>
-<li>t Display in binary.</li>
-<li>i Display in instruction</li>
+<h2 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a>栈溢出</h2><h3 id="定位shellcode几种方法"><a href="#定位shellcode几种方法" class="headerlink" title="定位shellcode几种方法"></a>定位shellcode几种方法</h3><ol>
+<li><p>覆盖返回地址为shellcode开始的地址（需要查找shellcode开始静态地址）</p>
+<p><img src="1522142427080.png" alt="52214242708"></p>
+</li>
+<li><p>重新装入内存时，shellcode地址变化，采用跳板<code>jmp esp</code>(常用dll中的此指令)，间接跳转到shellcode。(往往除了 ESP 之外，EAX、EBX、ESI 等寄存器也会指向栈顶附近，故在选择跳转指令地址时也可以灵活一些，除了 jmp esp之外，mov eax、esp 和 jmp eax 等指令序列也可以完成进入栈区的功能。)<br><img src="1522142399591.png" alt="52214239959"></p>
+</li>
+<li><p>其他方式</p>
+<p><img src="1522142692246.png" alt="52214269224"></p>
+<blockquote>
+<p>注意：抬高栈顶保护shellcode，shellcode自身存在push压栈指令，可能破坏自身代码。</p>
+</blockquote>
+<p><img src="1522200890824.png" alt="52220089082"></p>
+<h2 id="堆溢出"><a href="#堆溢出" class="headerlink" title="堆溢出"></a>堆溢出</h2></li>
 </ol>
-<p>eg：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(gdb) i r eip</span><br><span class="line">eip 0x8048384 0x8048384 &lt;main+16&gt;</span><br><span class="line">(gdb) x/o 0x8048384</span><br><span class="line">0x8048384 &lt;main+16&gt;: 077042707</span><br><span class="line">(gdb) x/x $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 0x00fc45c7</span><br><span class="line">(gdb) x/u $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 16532935</span><br><span class="line">(gdb) x/t $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 00000000111111000100010111000111</span><br><span class="line">(gdb) x/i $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: mov DWORD PTR [ebp-4],0x0</span><br><span class="line">(gdb)</span><br></pre></td></tr></table></figure>
+<h3 id="堆的特性"><a href="#堆的特性" class="headerlink" title="堆的特性"></a>堆的特性</h3><ol>
+<li>堆是一种在程序运行时动态分配的内存。所谓动态是指所需内存的大小在程序设计时不能预先决定，需要在程序运行时参考用户的反馈。</li>
+<li>堆在使用时需要程序员用专用函数进行申请，如 C 语言中的 malloc 等函数、C++中的new 函数等都是最常见的分配堆内存的函数。堆内存申请有可能成功，也有可能失败，这与申请内存的大小、机器性能和当前运行环境有关。</li>
+<li>一般用一个堆指针来使用申请得到的内存，读、写、释放都通过这个指针来完成。</li>
+<li>使用完毕后需要把堆指针传给堆释放函数回收这片内存，否则会造成内存泄露。典型的释放函数包括 free、delete 等。</li>
+</ol>
+<h3 id="堆内存与栈内存比较"><a href="#堆内存与栈内存比较" class="headerlink" title="堆内存与栈内存比较"></a>堆内存与栈内存比较</h3><p><img src="微信截图_20180307101104.png" alt="微信截图_20180307101104"></p>
+<h2 id="堆数据结构"><a href="#堆数据结构" class="headerlink" title="堆数据结构"></a>堆数据结构</h2><ul>
+<li><p>堆块：出于性能的考虑，堆区的内存按不同大小组织成块，以堆块为单位进行标识，而不是传统的按字节标识。一个堆块包括两个部分：块首和块身。块首是一个堆块头部的几个字节，用来标识这个堆块自身的信息，例如，本块的大小、本块空闲还是占用等信息；块身是紧跟在块首后面的部分，也是最终分配给用户使用的数据区。</p>
+</li>
+<li><p>堆表：堆表一般位于堆区的起始位置，用于索引堆区中所有堆块的重要信息，包括堆块的位置、堆块的大小、空闲还是占用等。堆表的数据结构决定了整个堆区的组织方式，是快速检索空闲块、保证堆分配效率的关键。堆表在设计时可能会考虑采用平衡二叉树等高级数据结构用于优化查找效率。现代操作系统的堆表往往不止一种数据结构。</p>
+<p><img src="微信截图_20180307101452.png" alt="微信截图_20180307101452"><br>堆表主要包括：</p>
 <ul>
-<li>添加数字显示相应个数值</li>
+<li><p>空闲双向链表 Freelist（空表)</p>
+<p>空闲堆块的块首中包含一对重要的指针，这对指针用于将空闲堆块组织成双向链表。按照堆块的大小不同，空表总共被分为 128 条。</p>
+<p><img src="微信截图_20180307102310.png" alt="微信截图_20180307102310"></p>
+<p>除free[0]为大于等于1024 字节的堆块（小于 512KB）。这些堆块按照各自的大小在零号空表中升序地依次排列下去，其余都遵循：</p>
+<p>​                            空闲堆块的大小＝索引项（ID）×8（字节）</p>
+</li>
 </ul>
-<p>eg：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/2x $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 0x00fc45c7 0x83000000</span><br><span class="line">(gdb) x/12x $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 0x00fc45c7 0x83000000 0x7e09fc7d 0xc713eb02</span><br><span class="line">0x8048394 &lt;main+32&gt;: 0x84842404 0x01e80804 0x8dffffff 0x00fffc45</span><br><span class="line">0x80483a4 &lt;main+48&gt;: 0xc3c9e5eb 0x90909090 0x90909090 0x5de58955</span><br><span class="line">(gdb)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>快速单向链表 Lookaside:快表是 Windows 用来加速堆块分配而采用的一种堆表。这里之所以把它叫做“快表”是因为这类单向链表中从来不会发生堆块合并（其中的空闲块块首被设置为占用态，用来防止堆块合并）。快表也有 128 条，组织结构与空表类似，只是其中的堆块按照单链表组织。快表总是被初始化为空，而且每条快表最多只有 4 个结点，故很快就会被填满。</p>
+<p><img src="微信截图_20180307102706.png" alt="微信截图_20180307102706"></p>
+</li>
+</ul>
+<h3 id="堆的三种操作"><a href="#堆的三种操作" class="headerlink" title="堆的三种操作"></a>堆的三种操作</h3><p>分配、释放和合并，分配和释放是在程序提交申请和执行的，而堆块合并则是由堆管理系统自动完成的。</p>
+<ul>
+<li><p>堆块分配</p>
+<ul>
+<li>从快表中分配堆块比较简单，包括寻找到大小匹配的空闲堆块、将其状态修改为占用态、把它从堆表中“卸下”、最后返回一个指向堆块块身的指针给程序使用。</li>
+<li>普通空表分配时首先寻找最优的空闲块分配，若失败，则寻找次优的空闲块分配，即最小的能够满足要求的空闲块。</li>
+<li>零号空表中按照大小升序链着大小不同的空闲块，故在分配时先从 free[0]反向查找最后一个块（即表中最大块），看能否满足要求，如果能满足要求，再正向搜索最小能够满足要求的空闲堆块进行分配（这就明白为什么零号空表要按照升序排列了）</li>
+</ul>
+</li>
+<li><p>堆块释放</p>
+<p>释放堆块的操作包括将堆块状态改为空闲，链入相应的堆表。所有的释放块都链入堆表的末尾，分配的时候也先从堆表末尾拿。</p>
+</li>
+<li><p>堆块合并</p>
+<p>经过反复的申请与释放操作，堆区很可能变得“千疮百孔”，产生很多内存碎片。为了合理有效地利用内存，堆管理系统还要能够进行堆块合并操作，当堆管理系统发现两个空闲堆块彼此相邻的时候，就会进行堆块合并操作。堆块合并包括将两个块从空闲链表中“卸下”、合并堆块、调整合并后大块的块首信息（如大小等）、将新块重新链入空闲链表。</p>
+<blockquote>
+<p>内存紧缩（shrink the compact）：由RtlCompactHeap执行，这个操作的效果与磁盘碎片整理差不多，会对整个堆进行调整，尽量合并可用的碎片。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="windows中分配释放算法"><a href="#windows中分配释放算法" class="headerlink" title="windows中分配释放算法"></a>windows中分配释放算法</h3><p>内存块根据大小分为三类</p>
+<ul>
+<li>小块：SIZE&lt;1KB</li>
+<li>大块：1KB≤SIZE&lt;512KB</li>
+<li>巨块：SIZE≥512KB</li>
+</ul>
+<p>​                                                    分配和释放算法：</p>
+<p><img src="微信截图_20180307104218.png" alt="微信截图_20180307104218"></p>
+<p>windows堆管理要点：</p>
 <ol>
-<li>b 1 byte</li>
-<li>h A halfword, 2 bytes in size</li>
-<li>w A word, 4 bytes in size</li>
-<li>g A giant, 8 bytes in size</li>
+<li>快表中的空闲块被设置为占用态，故不会发生堆块合并操作。</li>
+<li>快表只有精确匹配时才会分配，不存在“搜索次优解”和“找零钱”现象。</li>
+<li>快表是单链表，操作比双链表简单，插入删除都少用很多指令。</li>
+<li>综上所述，快表很“快”，故在分配和释放时总是优先使用快表，失败时才用空表。</li>
+<li>快表只有 4 项，很容易被填满，因此空表也是被频繁使用的。</li>
 </ol>
-<p>eg:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/8xb $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 0xc7 0x45 0xfc 0x00 0x00 0x00 0x00 0x83</span><br><span class="line">(gdb) x/8xh $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 0x45c7 0x00fc 0x0000 0x8300 0xfc7d 0x7e09 0xeb02 0xc713</span><br><span class="line">(gdb) x/8xw $eip</span><br><span class="line">0x8048384 &lt;main+16&gt;: 0x00fc45c7 0x83000000 0x7e09fc7d 0xc713eb02</span><br><span class="line">0x8048394 &lt;main+32&gt;: 0x84842404 0x01e80804 0x8dffffff 0x00fffc45</span><br><span class="line">(gdb)</span><br></pre></td></tr></table></figure>
-<h2 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h2><h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc ,<span class="keyword">char</span> *argv[])</span> <span class="comment">//argc为参数个数，argv[]为参数又叫argument vector，以字符数组形式存储</span></span></span><br></pre></td></tr></table></figure>
-<p>eg：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> arg_count, <span class="keyword">char</span> *arg_list[])</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"There were %d arguments provided:\n"</span>, arg_count);</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; arg_count; i++)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"argument #%d\t-\t%s\n"</span>, i, arg_list[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">reader@hacking:~/booksrc $ gcc -o commandline commandline.c</span><br><span class="line">reader@hacking:~/booksrc $ ./commandline</span><br><span class="line">There were 1 arguments provided:</span><br><span class="line">argument #0 - ./commandline</span><br><span class="line">reader@hacking:~/booksrc $ ./commandline this is a test</span><br><span class="line">There were 5 arguments provided:</span><br><span class="line">argument #0 - ./commandline</span><br><span class="line">argument #1 - this</span><br><span class="line">argument #2 - is</span><br><span class="line">argument #3 - a</span><br><span class="line">argument #4 - test</span><br><span class="line">reader@hacking:~/booksrc $</span><br></pre></td></tr></table></figure></p>
-<p>可能存在越界访问参数问题</p>
-<h3 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h3><h3 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h3><h3 id="内存分段-Memory-Segmentation"><a href="#内存分段-Memory-Segmentation" class="headerlink" title="内存分段(Memory Segmentation)"></a>内存分段(Memory Segmentation)</h3><p>Five segments: text, data, bss,heap, and stack</p>
-<p><img src="memoryLayoutC.jpg" alt=""></p>
+<p>综上所述，Windows 的堆管理策略兼顾了内存合理使用、分配效率等多方面的因素。</p>
+<h3 id="windows堆分配函数"><a href="#windows堆分配函数" class="headerlink" title="windows堆分配函数"></a>windows堆分配函数</h3><p>所有的堆分配函数最终都将使用位于 ntdll.dll 中的 RtlAllocateHeap()函数进行分配，这个函数也是在用户态能够看到的最底层的堆分配函数。所谓万变不离其宗，这个“宗”就是RtlAllocateHeap()。因此，研究 Windows 堆只要研究这个函数即可。<br><img src="微信截图_20180307104758.png" alt="微信截图_20180307104758"></p>
+<h2 id="格式化串溢出"><a href="#格式化串溢出" class="headerlink" title="格式化串溢出"></a>格式化串溢出</h2><h2 id="内存攻击技术"><a href="#内存攻击技术" class="headerlink" title="内存攻击技术"></a>内存攻击技术</h2><h3 id="S-E-H"><a href="#S-E-H" class="headerlink" title="S.E.H"></a>S.E.H</h3><p>S.E.H 即异常处理结构体（Structure Exception Handler）,它是 Windows 异常处理机制所采用的重要数据结构。每个 S.E.H 包含两个 DWORD 指针：S.E.H 链表指针和异常处理函数句柄，共 8 个字节</p>
+<p><img src="微信截图_20180314102706.png" alt="微信截图_20180314102706"></p>
+<h1 id="漏洞利用原理-高级"><a href="#漏洞利用原理-高级" class="headerlink" title="漏洞利用原理(高级)"></a>漏洞利用原理(高级)</h1><h2 id="GS"><a href="#GS" class="headerlink" title="GS"></a>GS</h2><p>在栈帧中压入security cookie，也叫”canery”， .data中存入副本，函数返回时进行验证操作security check，检查两者是否相等，若不相等，系统进入异常处理流程，函数不会返回。</p>
+<p><img src="微信截图_20180314095520.png" alt="微信截图_20180314095520"></p>
+<p>为了性能例外情况：</p>
 <ol>
-<li>text segment/code segment：用于存放程序代码的区域， 编译时确定， 只读。更进一步讲是存放处理器的机器指令，当各个源文件单独编译之后生成目标文件，经连接器链接各个目标文件并解决各个源文件之间函数的引用，与此同时，还得将所有目标文件中的.text段合在一起，但不是简单的将它们“堆”在一起就完事，还需要处理各个段之间的函数引用问题。<ul>
-<li>text段为只读，防止修改程序，而且能够同时多次运行同一程序</li>
-</ul>
-</li>
+<li>函数不包含缓冲区。</li>
+<li>函数被定义为具有变量参数列表</li>
+<li>函数使用无保护的关键字标记。</li>
+<li>函数在第一个语句中包含内嵌汇编代码。</li>
+<li>缓冲区不是 8 字节类型且大小不大于 4 个字节。</li>
 </ol>
-<ol>
-<li>data 段:用于存放在编译阶段(而非运行时)就能确定的数据，可读可写。也是通常所说的静态存储区，赋了初值的全局变量、常量和静态变量都存放在这个域。<ul>
-<li>data段则需要占用可执行文件空间，其内容由程序初始化，</li>
-</ul>
-</li>
-<li><p>bss段（Block Started by Symbol segment）通常是指用来存放程序中未初始化的全局变量的一块内存区域，一般在初始化时bss 段部分将会清零（bss段属于静态内存分配，即程序一开始就将其清零了）。</p>
-<ul>
-<li>bss不占用可执行文件空间，其内容由操作系统初始化（清零），裸机程序需要自行手动清零。</li>
-</ul>
-</li>
-<li><p>heap段：堆段，malloc和free控制着堆区的分配与释放，新的堆区的分配不一定使用释放后的低地址位置，与释放的低地址内存块大小有关。</p>
-</li>
-<li>stack段：栈端</li>
-</ol>
-<p>参见：<a href="https://www.geeksforgeeks.org/memory-layout-of-c-program/" target="_blank" rel="noopener">Memory Layout of C Programs</a></p>
-<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>高级函数 filestreams</p>
-<p>低级函数 file descripors： open() ,  close() ,  read() ,  write()</p>
-<p>错误均返回-1</p>
-<p>access mode：</p>
-<p><strong>O_RDONLY</strong> Open file for read-only access.<br><strong>O_WRONLY</strong> Open file for write-only access.<br><strong>O_RDWR</strong> Open file for both read and write access.</p>
-<p><strong>O_APPEND</strong> Write data at the end of the file.<br><strong>O_TRUNC</strong> If the file already exists, truncate the file to 0 length.<br><strong>O_CREAT</strong> Create the file if it doesn’t exist.</p>
-<p>file permission：</p>
-<p>S_IRUSR Give the file read permission for the user (owner).<br>S_IWUSR Give the file write permission for the user (owner).<br>S_IXUSR Give the file execute permission for the user (owner).<br>S_IRGRP Give the file read permission for the group.<br>S_IWGRP Give the file write permission for the group.<br>S_IXGRP Give the file execute permission for the group.<br>S_IROTH Give the file read permission for other (anyone).<br>S_IWOTH Give the file write permission for other (anyone).<br>S_IXOTH Give the file execute permission for other (anyone).</p>
-<p>chown命令更改文件属主 </p>
-<p>chmod命令更改文件权限</p>
-<ul>
-<li>文件权限更改chmod 9bit位法、ugo+或- rwx法</li>
-</ul>
-<p>getuid获取用户id，root用户uid为0</p>
-<p>geteuid获取执行时的id</p>
-<p><code>#include&lt; &gt;</code>编译器在标准头文件路径中查找头文件</p>
-<p><code>#include( )</code> 编译器在当前目录中查找头文件</p>
-<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>结构体可以写进头文件中</p>
-<p>三种访问结构体中元素：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Three different ways to access struct elements:</span></span><br><span class="line">hour = current_time.tm_hour; <span class="comment">// 1. Direct access</span></span><br><span class="line">minute = time_ptr-&gt;tm_min; <span class="comment">// 2. Access via pointer</span></span><br><span class="line">second = *((<span class="keyword">int</span> *) time_ptr); <span class="comment">// 3. Hacky pointer access</span></span><br></pre></td></tr></table></figure>
-<p>第三种方法通过指针(地址)访问结构体成员。</p>
-<h3 id="伪随机数"><a href="#伪随机数" class="headerlink" title="伪随机数"></a>伪随机数</h3><p>srand()设置种子，相同的种子产生相同的随机数序列，一般采用epoch即time().</p>
-<p>rand()产生随机数</p>
-<p>eg:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"RAND_MAX is %u\n"</span>, RAND_MAX);</span><br><span class="line">srand(time(<span class="number">0</span>));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"random values from 0 to RAND_MAX\n"</span>);</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; <span class="number">8</span>; i++)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, rand());</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"random values from 1 to 20\n"</span>);</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; <span class="number">8</span>; i++)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (rand()%<span class="number">20</span>)+<span class="number">1</span>); <span class="comment">//产生1-20随机数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>未完待续……………</p>
 
       
     </div>
@@ -549,7 +567,7 @@
           
             <a href="/tags/读书笔记/" rel="tag"><i class="fa fa-tag"></i> 读书笔记</a>
           
-            <a href="/tags/Exploit/" rel="tag"><i class="fa fa-tag"></i> Exploit</a>
+            <a href="/tags/漏洞/" rel="tag"><i class="fa fa-tag"></i> 漏洞</a>
           
         </div>
       
@@ -562,8 +580,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/14/GitHub-Hexo-NexT博客搭建及优化/" rel="next" title="GitHub+Hexo+NexT博客搭建及优化">
-                <i class="fa fa-chevron-left"></i> GitHub+Hexo+NexT博客搭建及优化
+              <a href="/2018/03/06/读书笔记/《CSAPP》笔记/" rel="next" title="《CSAPP》笔记">
+                <i class="fa fa-chevron-left"></i> 《CSAPP》笔记
               </a>
             
           </div>
@@ -572,8 +590,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/26/信息搜集/" rel="prev" title="信息搜集">
-                信息搜集 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/07/Meditation/" rel="prev" title="Meditation">
+                Meditation <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -662,7 +680,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -673,7 +691,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -684,7 +702,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -731,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#程序基础知识"><span class="nav-number">1.</span> <span class="nav-text">程序基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#X86汇编"><span class="nav-number">1.1.</span> <span class="nav-text">X86汇编</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gdb命令"><span class="nav-number">1.2.</span> <span class="nav-text">gdb命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C语言"><span class="nav-number">1.3.</span> <span class="nav-text">C语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行参数"><span class="nav-number">1.3.1.</span> <span class="nav-text">命令行参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局变量和局部变量"><span class="nav-number">1.3.2.</span> <span class="nav-text">全局变量和局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态变量"><span class="nav-number">1.3.3.</span> <span class="nav-text">静态变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存分段-Memory-Segmentation"><span class="nav-number">1.3.4.</span> <span class="nav-text">内存分段(Memory Segmentation)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件系统"><span class="nav-number">1.3.5.</span> <span class="nav-text">文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构体"><span class="nav-number">1.3.6.</span> <span class="nav-text">结构体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪随机数"><span class="nav-number">1.3.7.</span> <span class="nav-text">伪随机数</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#漏洞原理"><span class="nav-number">1.</span> <span class="nav-text">漏洞原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PE文件格式"><span class="nav-number">1.1.</span> <span class="nav-text">PE文件格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要块-section"><span class="nav-number">1.1.1.</span> <span class="nav-text">主要块(section)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈溢出"><span class="nav-number">1.2.</span> <span class="nav-text">栈溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定位shellcode几种方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">定位shellcode几种方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆溢出"><span class="nav-number">1.3.</span> <span class="nav-text">堆溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆的特性"><span class="nav-number">1.3.1.</span> <span class="nav-text">堆的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆内存与栈内存比较"><span class="nav-number">1.3.2.</span> <span class="nav-text">堆内存与栈内存比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆数据结构"><span class="nav-number">1.4.</span> <span class="nav-text">堆数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆的三种操作"><span class="nav-number">1.4.1.</span> <span class="nav-text">堆的三种操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows中分配释放算法"><span class="nav-number">1.4.2.</span> <span class="nav-text">windows中分配释放算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows堆分配函数"><span class="nav-number">1.4.3.</span> <span class="nav-text">windows堆分配函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化串溢出"><span class="nav-number">1.5.</span> <span class="nav-text">格式化串溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存攻击技术"><span class="nav-number">1.6.</span> <span class="nav-text">内存攻击技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-E-H"><span class="nav-number">1.6.1.</span> <span class="nav-text">S.E.H</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#漏洞利用原理-高级"><span class="nav-number">2.</span> <span class="nav-text">漏洞利用原理(高级)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GS"><span class="nav-number">2.1.</span> <span class="nav-text">GS</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -765,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.9k</span>
+    <span title="Site words total count">11.8k</span>
   
 </div>
 

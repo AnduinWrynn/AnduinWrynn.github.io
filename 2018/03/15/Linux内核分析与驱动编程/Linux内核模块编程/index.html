@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Linux,Kernel," />
 
 
 
@@ -79,21 +79,31 @@
 
 
 
-<meta name="description" content="内核中分别找出一处proc和seqfile的完整使用过程并记录下来procproc_create函数开始，看看其中的实现 123456static inline struct proc_dir_entry *proc_create(    const char *name, umode_t mode, struct proc_dir_entry *parent,    const struct f">
-<meta name="keywords" content="Linux">
+<meta name="description" content="编写源文件 创建sample文件夹，新建hello.c文件，如下图   编写hello.c文件    编写Makefile 新建Makefile文件，编写Makefile文件    编译模块 使用make命令编译模块    模块装载与卸载 使用insmod命令装载模块,使用dmesg查看输出，lsmod查看模块。    使用rmmod卸载模块，dmesg查看输出。     参数传递 重新编写hel">
+<meta name="keywords" content="Linux,Kernel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="proc">
-<meta property="og:url" content="http://yoursite.com/2018/04/07/Linux虚拟文件系统/index.html">
+<meta property="og:title" content="Linux内核模块编程">
+<meta property="og:url" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/index.html">
 <meta property="og:site_name" content="Binary Road">
-<meta property="og:description" content="内核中分别找出一处proc和seqfile的完整使用过程并记录下来procproc_create函数开始，看看其中的实现 123456static inline struct proc_dir_entry *proc_create(    const char *name, umode_t mode, struct proc_dir_entry *parent,    const struct f">
+<meta property="og:description" content="编写源文件 创建sample文件夹，新建hello.c文件，如下图   编写hello.c文件    编写Makefile 新建Makefile文件，编写Makefile文件    编译模块 使用make命令编译模块    模块装载与卸载 使用insmod命令装载模块,使用dmesg查看输出，lsmod查看模块。    使用rmmod卸载模块，dmesg查看输出。     参数传递 重新编写hel">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2018/04/07/Linux虚拟文件系统/1523067125513.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/07/Linux虚拟文件系统/1523067355434.png">
-<meta property="og:updated_time" content="2018-04-07T02:16:27.942Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315185943-1521111787986.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315190337.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315190532-1521111961823.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315190708.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315191424.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315191701.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315191949.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315192043.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315192418.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315192740.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315192931.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315193019.png">
+<meta property="og:updated_time" content="2018-03-15T11:43:55.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="proc">
-<meta name="twitter:description" content="内核中分别找出一处proc和seqfile的完整使用过程并记录下来procproc_create函数开始，看看其中的实现 123456static inline struct proc_dir_entry *proc_create(    const char *name, umode_t mode, struct proc_dir_entry *parent,    const struct f">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/07/Linux虚拟文件系统/1523067125513.png">
+<meta name="twitter:title" content="Linux内核模块编程">
+<meta name="twitter:description" content="编写源文件 创建sample文件夹，新建hello.c文件，如下图   编写hello.c文件    编写Makefile 新建Makefile文件，编写Makefile文件    编译模块 使用make命令编译模块    模块装载与卸载 使用insmod命令装载模块,使用dmesg查看输出，lsmod查看模块。    使用rmmod卸载模块，dmesg查看输出。     参数传递 重新编写hel">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/微信截图_20180315185943-1521111787986.png">
 
 
 
@@ -123,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/07/Linux虚拟文件系统/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/"/>
 
 
 
 
 
-  <title>proc | Binary Road</title>
+  <title>Linux内核模块编程 | Binary Road</title>
   
 
 
@@ -266,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/Linux虚拟文件系统/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anduin">
@@ -283,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">proc</h1>
+          <h1 class="post-title" itemprop="name headline">Linux内核模块编程</h1>
         
 
         <div class="post-meta">
@@ -295,8 +305,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-07T09:21:52+08:00">
-                2018-04-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-15T18:52:30+08:00">
+                2018-03-15
               </time>
             
 
@@ -336,8 +346,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/07/Linux虚拟文件系统/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/04/07/Linux虚拟文件系统/" itemprop="commentsCount"></span>
+                <a href="/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,7 +355,7 @@
 
           
           
-             <span id="/2018/04/07/Linux虚拟文件系统/" class="leancloud_visitors" data-flag-title="proc">
+             <span id="/2018/03/15/Linux内核分析与驱动编程/Linux内核模块编程/" class="leancloud_visitors" data-flag-title="Linux内核模块编程">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -375,7 +385,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  793
+                  143
                 </span>
               
 
@@ -391,7 +401,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  1
                 </span>
               
             </div>
@@ -412,22 +422,45 @@
       
 
       
-        <h4 id="内核中分别找出一处proc和seqfile的完整使用过程并记录下来"><a href="#内核中分别找出一处proc和seqfile的完整使用过程并记录下来" class="headerlink" title="内核中分别找出一处proc和seqfile的完整使用过程并记录下来"></a>内核中分别找出一处proc和seqfile的完整使用过程并记录下来</h4><h5 id="proc"><a href="#proc" class="headerlink" title="proc"></a>proc</h5><p>proc_create函数开始，看看其中的实现</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">inline</span> struct proc_dir_entry *<span class="title">proc_create</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">umode_t</span> mode, struct proc_dir_entry *parent,</span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="keyword">const</span> struct file_operations *proc_fops)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> proc_create_data(name, mode, parent, proc_fops, <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>函数返回一个proc_dir_entry。可以看到proc_create中直接调用了proc_create_data，而该函数主要完成2个功能</p>
-<ol>
-<li>调用__proc_create完成具体proc_dir_entry的创建。</li>
-<li>调用proc_register把entry注册进系统。</li>
+        <h2 id="编写源文件"><a href="#编写源文件" class="headerlink" title="编写源文件"></a>编写源文件</h2><ol>
+<li><p>创建<code>sample</code>文件夹，新建<code>hello.c</code>文件，如下图</p>
+<p><img src="微信截图_20180315185943-1521111787986.png" alt="信截图_2018031518594"></p>
+</li>
+<li><p>编写<code>hello.c</code>文件</p>
+<p><img src="微信截图_20180315190337.png" alt="信截图_2018031519033"></p>
+</li>
 </ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">struct proc_dir_entry *<span class="title">proc_create_data</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">umode_t</span> mode,</span></span></span><br><span class="line"><span class="function"><span class="params">                    struct proc_dir_entry *parent,</span></span></span><br><span class="line"><span class="function"><span class="params">                    <span class="keyword">const</span> struct file_operations *proc_fops,</span></span></span><br><span class="line"><span class="function"><span class="params">                    <span class="keyword">void</span> *data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">proc_dir_entry</span> *<span class="title">pde</span>;</span></span><br><span class="line">    <span class="keyword">if</span> ((mode &amp; S_IFMT) == <span class="number">0</span>)</span><br><span class="line">        mode |= S_IFREG;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!S_ISREG(mode)) &#123;</span><br><span class="line">        WARN_ON(<span class="number">1</span>);    <span class="comment">/* use proc_mkdir() */</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((mode &amp; S_IALLUGO) == <span class="number">0</span>)</span><br><span class="line">        mode |= S_IRUGO;</span><br><span class="line">    pde = __proc_create(&amp;parent, name, mode, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (!pde)</span><br><span class="line">        <span class="keyword">goto</span> out;</span><br><span class="line">    pde-&gt;proc_fops = proc_fops;</span><br><span class="line">    pde-&gt;data = data;</span><br><span class="line">    <span class="keyword">if</span> (proc_register(parent, pde) &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">goto</span> out_free;</span><br><span class="line">    <span class="keyword">return</span> pde;</span><br><span class="line">out_free:</span><br><span class="line">    kfree(pde);</span><br><span class="line">out:</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先看proc_dir_entry的创建，这里通过__proc_create函数，其实该函数内部也很简单，就是为entry分配了空间，并对相关字段进行设置，主要包含name,namelen,mod，nlink等。创建好后，就设置操作函数proc_fops和data。然后就调用proc_register进行注册。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">proc_register</span><span class="params">(struct proc_dir_entry * dir, struct proc_dir_entry * dp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">proc_dir_entry</span> *<span class="title">tmp</span>;</span></span><br><span class="line">    <span class="keyword">int</span> ret;</span><br><span class="line"></span><br><span class="line">    ret = proc_alloc_inum(&amp;dp-&gt;low_ino);</span><br><span class="line">    <span class="keyword">if</span> (ret)</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">     <span class="comment">/*如果是 目录*/</span></span><br><span class="line">    <span class="keyword">if</span> (S_ISDIR(dp-&gt;mode)) &#123;</span><br><span class="line">        dp-&gt;proc_fops = &amp;proc_dir_operations;</span><br><span class="line">        dp-&gt;proc_iops = &amp;proc_dir_inode_operations;</span><br><span class="line">        dir-&gt;nlink++;</span><br><span class="line">        <span class="comment">/*如果是链接*/</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (S_ISLNK(dp-&gt;mode)) &#123;</span><br><span class="line">        dp-&gt;proc_iops = &amp;proc_link_inode_operations;</span><br><span class="line">        <span class="comment">/*如果是文件*/</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (S_ISREG(dp-&gt;mode)) &#123;</span><br><span class="line">        BUG_ON(dp-&gt;proc_fops == <span class="literal">NULL</span>);</span><br><span class="line">        dp-&gt;proc_iops = &amp;proc_file_inode_operations;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        WARN_ON(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> -EINVAL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    spin_lock(&amp;proc_subdir_lock);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (tmp = dir-&gt;subdir; tmp; tmp = tmp-&gt;next)</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">strcmp</span>(tmp-&gt;name, dp-&gt;name) == <span class="number">0</span>) &#123;</span><br><span class="line">            WARN(<span class="number">1</span>, <span class="string">"proc_dir_entry '%s/%s' already registered\n"</span>,</span><br><span class="line">                dir-&gt;name, dp-&gt;name);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">/*子dir链接成链表，且子dir中含有父dir的指针*/</span></span><br><span class="line">    dp-&gt;next = dir-&gt;subdir;</span><br><span class="line">    dp-&gt;parent = dir;</span><br><span class="line">    dir-&gt;subdir = dp;</span><br><span class="line">    spin_unlock(&amp;proc_subdir_lock);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>函数首先分配一个inode number，然后根据entry的类型对其进行操作函数赋值，主要分为目录、链接、文件。这里我们只关注文件，文件的操作函数一般由用户自己定义，即上面我们设置的ops，这里仅仅是设置inode操作函数表，设置成了全局的proc_file_inode_operations，然后插入到父目录的子文件链表中，注意是头插法。基本结构如下，其中每个子节点都有指向父节点的指针。 </p>
-<h5 id="seqfile"><a href="#seqfile" class="headerlink" title="seqfile"></a>seqfile</h5><p>UNIX的世界里，文件是最普通的概念，所以用文件来作为内核和用户空间传递数据的接口也是再普通不过的事情，并且这样的接口对于shell也是相当友好的，方便管理员通过shell直接管理系统。由于伪文件系统proc文件系统在处理大数据结构（大于一页的数据）方面有比较大的局限性，使得在那种情况下进行编程特别别扭，很容易导致bug，所以序列文件接口被发明出来，它提供了更加友好的接口，以方便程序员。 </p>
-<h4 id="在用户空间进行“读”、“写”"><a href="#在用户空间进行“读”、“写”" class="headerlink" title="在用户空间进行“读”、“写”"></a>在用户空间进行“读”、“写”</h4><p>读进程10的状态信息</p>
-<p><img src="1523067125513.png" alt="1523067125513"></p>
-<p>写hostname</p>
-<p><img src="1523067355434.png" alt="1523067355434"></p>
+<h2 id="编写Makefile"><a href="#编写Makefile" class="headerlink" title="编写Makefile"></a>编写Makefile</h2><ul>
+<li><p>新建<code>Makefile</code>文件，编写<code>Makefile</code>文件</p>
+<p><img src="微信截图_20180315190532-1521111961823.png" alt="信截图_2018031519053"></p>
+</li>
+</ul>
+<h2 id="编译模块"><a href="#编译模块" class="headerlink" title="编译模块"></a>编译模块</h2><ul>
+<li><p>使用<code>make</code>命令编译模块</p>
+<p><img src="微信截图_20180315190708.png" alt="信截图_2018031519070"></p>
+</li>
+</ul>
+<h2 id="模块装载与卸载"><a href="#模块装载与卸载" class="headerlink" title="模块装载与卸载"></a>模块装载与卸载</h2><ol>
+<li><p>使用<code>insmod</code>命令装载模块,使用<code>dmesg</code>查看输出，<code>lsmod</code>查看模块。</p>
+<p><img src="微信截图_20180315191424.png" alt="信截图_2018031519142"></p>
+<p><img src="微信截图_20180315191701.png" alt="信截图_2018031519170"></p>
+</li>
+<li><p>使用<code>rmmod</code>卸载模块，<code>dmesg</code>查看输出。</p>
+<p><img src="微信截图_20180315191949.png" alt="信截图_2018031519194"></p>
+<p><img src="微信截图_20180315192043.png" alt="信截图_2018031519204"></p>
+</li>
+</ol>
+<h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2><ol>
+<li><p>重新编写<code>hello.c</code>源文件如下图</p>
+<p><img src="微信截图_20180315192418.png" alt="信截图_2018031519241"></p>
+</li>
+<li><p>输入<code>insmod hello.ko test=1</code>在模块加载时传递参数，<code>lsmod</code>查看模块，<code>dmesg</code>查看输出结果。</p>
+<p><img src="微信截图_20180315192740.png" alt="信截图_2018031519274"></p>
+<p><img src="微信截图_20180315192931.png" alt="信截图_2018031519293"></p>
+<p><img src="微信截图_20180315193019.png" alt="信截图_2018031519301"></p>
+<p>​</p>
+</li>
+</ol>
 
       
     </div>
@@ -476,6 +509,8 @@
           
             <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
           
+            <a href="/tags/Kernel/" rel="tag"><i class="fa fa-tag"></i> Kernel</a>
+          
         </div>
       
 
@@ -487,8 +522,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/02/Blockchain/" rel="next" title="Blockchain resources">
-                <i class="fa fa-chevron-left"></i> Blockchain resources
+              <a href="/2018/03/07/Meditation/" rel="next" title="Meditation">
+                <i class="fa fa-chevron-left"></i> Meditation
               </a>
             
           </div>
@@ -496,6 +531,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/20/读书笔记/shellcoders/" rel="prev" title="shellcoders">
+                shellcoders <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -583,7 +622,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -594,7 +633,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -605,7 +644,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -652,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#内核中分别找出一处proc和seqfile的完整使用过程并记录下来"><span class="nav-number">1.</span> <span class="nav-text">内核中分别找出一处proc和seqfile的完整使用过程并记录下来</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#proc"><span class="nav-number">1.1.</span> <span class="nav-text">proc</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#seqfile"><span class="nav-number">1.2.</span> <span class="nav-text">seqfile</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在用户空间进行“读”、“写”"><span class="nav-number">2.</span> <span class="nav-text">在用户空间进行“读”、“写”</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编写源文件"><span class="nav-number">1.</span> <span class="nav-text">编写源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写Makefile"><span class="nav-number">2.</span> <span class="nav-text">编写Makefile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译模块"><span class="nav-number">3.</span> <span class="nav-text">编译模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块装载与卸载"><span class="nav-number">4.</span> <span class="nav-text">模块装载与卸载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数传递"><span class="nav-number">5.</span> <span class="nav-text">参数传递</span></a></li></ol></div>
             
 
           </div>
@@ -686,7 +725,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.9k</span>
+    <span title="Site words total count">11.8k</span>
   
 </div>
 
