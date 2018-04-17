@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="知识C/C++、操作系统(内存管理)、硬件体系结构 12or eax,eax		//if (eax&amp;lt;0)jge label 12345678910111213141516171819202122232425260x8048430 &amp;lt;triangle&amp;gt;: push %ebp0x8048431 &amp;lt;triangle+1&amp;gt;: mov %esp, %ebp0x8048433 &amp;">
+<meta name="description" content="C/C++、操作系统(内存管理)、硬件体系结构 12or eax,eax		//if (eax&amp;lt;0)jge label 12345678910111213141516171819202122232425260x8048430 &amp;lt;triangle&amp;gt;: push %ebp0x8048431 &amp;lt;triangle+1&amp;gt;: mov %esp, %ebp0x8048433 &amp;lt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="shellcoders">
 <meta property="og:url" content="http://yoursite.com/2018/03/20/读书笔记/shellcoders/index.html">
 <meta property="og:site_name" content="Binary Road">
-<meta property="og:description" content="知识C/C++、操作系统(内存管理)、硬件体系结构 12or eax,eax		//if (eax&amp;lt;0)jge label 12345678910111213141516171819202122232425260x8048430 &amp;lt;triangle&amp;gt;: push %ebp0x8048431 &amp;lt;triangle+1&amp;gt;: mov %esp, %ebp0x8048433 &amp;">
+<meta property="og:description" content="C/C++、操作系统(内存管理)、硬件体系结构 12or eax,eax		//if (eax&amp;lt;0)jge label 12345678910111213141516171819202122232425260x8048430 &amp;lt;triangle&amp;gt;: push %ebp0x8048431 &amp;lt;triangle+1&amp;gt;: mov %esp, %ebp0x8048433 &amp;lt">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-20T14:18:23.427Z">
+<meta property="og:updated_time" content="2018-04-17T05:02:55.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shellcoders">
-<meta name="twitter:description" content="知识C/C++、操作系统(内存管理)、硬件体系结构 12or eax,eax		//if (eax&amp;lt;0)jge label 12345678910111213141516171819202122232425260x8048430 &amp;lt;triangle&amp;gt;: push %ebp0x8048431 &amp;lt;triangle+1&amp;gt;: mov %esp, %ebp0x8048433 &amp;">
+<meta name="twitter:description" content="C/C++、操作系统(内存管理)、硬件体系结构 12or eax,eax		//if (eax&amp;lt;0)jge label 12345678910111213141516171819202122232425260x8048430 &amp;lt;triangle&amp;gt;: push %ebp0x8048431 &amp;lt;triangle+1&amp;gt;: mov %esp, %ebp0x8048433 &amp;lt">
 
 
 
@@ -349,7 +349,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  448
+                  446
                 </span>
               
 
@@ -386,7 +386,7 @@
       
 
       
-        <h1 id="知识"><a href="#知识" class="headerlink" title="知识"></a>知识</h1><p>C/C++、操作系统(内存管理)、硬件体系结构</p>
+        <p>C/C++、操作系统(内存管理)、硬件体系结构</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">or eax,eax		//if (eax&lt;0)</span><br><span class="line">jge label</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">0x8048430 &lt;triangle&gt;: push %ebp</span><br><span class="line">0x8048431 &lt;triangle+1&gt;: mov %esp, %ebp</span><br><span class="line">0x8048433 &lt;triangle+3&gt;: push %edi</span><br><span class="line">0x8048434 &lt;triangle+4&gt;: push %esi</span><br><span class="line">0x8048435 &lt;triangle+5&gt;: sub $0x30,%esp</span><br><span class="line">0x8048438 &lt;triangle+8&gt;: lea 0xffffffd8(%ebp), %edi</span><br><span class="line">0x804843b &lt;triangle+11&gt;: mov $0x8049508,%esi</span><br><span class="line">0x8048440 &lt;triangle+16&gt;: cld</span><br><span class="line">0x8048441 &lt;triangle+17&gt;: mov $0x30,%esp</span><br><span class="line">0x8048446 &lt;triangle+22&gt;: repz movsl %ds:( %esi), %es:( %edi)</span><br><span class="line">0x8048448 &lt;triangle+24&gt;: mov 0x8(%ebp),%eax</span><br><span class="line">0x804844b &lt;triangle+27&gt;: mov %eax,%edx</span><br><span class="line">0x804844d &lt;triangle+29&gt;: imul 0xc(%ebp),%edx</span><br><span class="line">0x8048451 &lt;triangle+33&gt;: mov %edx,%eax</span><br><span class="line">0x8048453 &lt;triangle+35&gt;: sar $0x1f,%eax</span><br><span class="line">0x8048456 &lt;triangle+38&gt;: shr $0x1f,%eax</span><br><span class="line">0x8048459 &lt;triangle+41&gt;: lea (%eax, %edx, 1), %eax</span><br><span class="line">0x804845c &lt;triangle+44&gt;: sar %eax</span><br><span class="line">0x804845e &lt;triangle+46&gt;: mov %eax,0xffffffd4(%ebp)</span><br><span class="line">0x8048461 &lt;triangle+49&gt;: mov 0xffffffd4(%ebp),%eax</span><br><span class="line">0x8048464 &lt;triangle+52&gt;: mov %eax,%eax</span><br><span class="line">0x8048466 &lt;triangle+54&gt;: add $0x30,%esp</span><br><span class="line">0x8048469 &lt;triangle+57&gt;: pop %esi</span><br><span class="line">0x804846a &lt;triangle+58&gt;: pop %edi</span><br><span class="line">0x804846b &lt;triangle+59&gt; pop %ebp</span><br><span class="line">0x804846c &lt;triangle+60&gt;: ret</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int triangle (int width, in height)&#123;</span><br><span class="line">int array[5] = &#123;0,1,2,3,4&#125;;</span><br><span class="line">int area;</span><br><span class="line">area = width * height/2;</span><br><span class="line">return (area);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -523,17 +523,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -552,7 +543,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -612,22 +603,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#知识"><span class="nav-number">1.</span> <span class="nav-text">知识</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -655,7 +630,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.8k</span>
+    <span title="Site words total count">13.3k</span>
   
 </div>
 
