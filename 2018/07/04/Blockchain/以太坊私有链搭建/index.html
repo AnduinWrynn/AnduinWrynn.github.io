@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="客户端geth安装12345apt-get install software-properties-common  // 安装工具包add-apt-repository -y ppa: ethereum/ethereum // 添加以太坊源apt-get update // 更新apt-get install ethereum // 安装go-ethereumgeth version // 查看g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="以太坊私有链搭建">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/Blockchain/以太坊私有链搭建/index.html">
+<meta property="og:site_name" content="Binary Road">
+<meta property="og:description" content="客户端geth安装12345apt-get install software-properties-common  // 安装工具包add-apt-repository -y ppa: ethereum/ethereum // 添加以太坊源apt-get update // 更新apt-get install ethereum // 安装go-ethereumgeth version // 查看g">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/1530692029244.png">
+<meta property="og:image" content="http://yoursite.com/1530771728423.png">
+<meta property="og:image" content="http://yoursite.com/1530762830490.png">
+<meta property="og:image" content="http://yoursite.com/1530762753406.png">
+<meta property="og:image" content="http://yoursite.com/1530762947706.png">
+<meta property="og:image" content="http://yoursite.com/1530766370261.png">
+<meta property="og:image" content="http://yoursite.com/1530766649199.png">
+<meta property="og:image" content="http://yoursite.com/1530694981280.png">
+<meta property="og:image" content="http://yoursite.com/1530696540314.png">
+<meta property="og:image" content="http://yoursite.com/1530699886655.png">
+<meta property="og:image" content="http://yoursite.com/1530701692797.png">
+<meta property="og:image" content="http://yoursite.com/1530770536341.png">
+<meta property="og:image" content="http://yoursite.com/1530770844338.png">
+<meta property="og:image" content="http://yoursite.com/1530775904444.png">
+<meta property="og:image" content="http://yoursite.com/1530775911979.png">
+<meta property="og:updated_time" content="2018-07-05T07:32:02.614Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="以太坊私有链搭建">
+<meta name="twitter:description" content="客户端geth安装12345apt-get install software-properties-common  // 安装工具包add-apt-repository -y ppa: ethereum/ethereum // 添加以太坊源apt-get update // 更新apt-get install ethereum // 安装go-ethereumgeth version // 查看g">
+<meta name="twitter:image" content="http://yoursite.com/1530692029244.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/Blockchain/以太坊私有链搭建/"/>
+
+
+
+
+
+  <title>以太坊私有链搭建 | Binary Road</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Binary Road</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record binary bit by bit.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/Blockchain/以太坊私有链搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anduin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Binary Road">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">以太坊私有链搭建</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-04T15:45:26+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/04/Blockchain/以太坊私有链搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/07/04/Blockchain/以太坊私有链搭建/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/07/04/Blockchain/以太坊私有链搭建/" class="leancloud_visitors" data-flag-title="以太坊私有链搭建">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> View
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,506
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="客户端geth安装"><a href="#客户端geth安装" class="headerlink" title="客户端geth安装"></a>客户端geth安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get install software-properties-common  // 安装工具包</span><br><span class="line">add-apt-repository -y ppa: ethereum/ethereum // 添加以太坊源</span><br><span class="line">apt-get update // 更新</span><br><span class="line">apt-get install ethereum // 安装go-ethereum</span><br><span class="line">geth version // 查看geth版本</span><br></pre></td></tr></table></figure>
+<h2 id="搭建私有链"><a href="#搭建私有链" class="headerlink" title="搭建私有链"></a>搭建私有链</h2><h3 id="初始状态文件genesis-json"><a href="#初始状态文件genesis-json" class="headerlink" title="初始状态文件genesis.json"></a>初始状态文件<code>genesis.json</code></h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"config"</span>: &#123;</span><br><span class="line">          <span class="attr">"chainId"</span>: <span class="number">88</span>,</span><br><span class="line">          <span class="attr">"homesteadBlock"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="attr">"eip155Block"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="attr">"eip158Block"</span>: <span class="number">0</span></span><br><span class="line">      &#125;,</span><br><span class="line">    <span class="attr">"alloc"</span>      : &#123;&#125;,</span><br><span class="line">    <span class="attr">"coinbase"</span>  : <span class="string">"0x0000000000000000000000000000000000000000"</span>,</span><br><span class="line">    <span class="attr">"difficulty"</span> : <span class="string">"0x400"</span>,</span><br><span class="line">    <span class="attr">"extraData"</span>  : <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"gasLimit"</span>  : <span class="string">"0xffffffff"</span>,</span><br><span class="line">    <span class="attr">"nonce"</span>      : <span class="string">"0x0000000000000042"</span>,</span><br><span class="line">    <span class="attr">"mixhash"</span>    : <span class="string">"0x0000000000000000000000000000000000000000000000000000000000000000"</span>,</span><br><span class="line">    <span class="attr">"parentHash"</span> : <span class="string">"0x0000000000000000000000000000000000000000000000000000000000000000"</span>,</span><br><span class="line">    <span class="attr">"timestamp"</span>  : <span class="string">"0x00"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mixhash</td>
+<td>与nonce配合用于挖矿，由上一个区块的一部分生成的hash。</td>
+</tr>
+<tr>
+<td>nonce</td>
+<td>nonce就是一个64位随机数，用于挖矿。</td>
+</tr>
+<tr>
+<td>difficulty</td>
+<td>设置当前区块的难度，如果难度过大，cpu挖矿就很难，这里设置较小难度</td>
+</tr>
+<tr>
+<td>alloc</td>
+<td>用来预置账号以及账号的以太币数量，因为私有链挖矿比较容易，所以我们不需要预置有币的账号，需要的时候自己创建即可以。</td>
+</tr>
+<tr>
+<td>coinbase</td>
+<td>矿工的账号，随便填</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>设置创世块的时间戳</td>
+</tr>
+<tr>
+<td>parentHash</td>
+<td>上一个区块的hash值，因为是创世块，所以这个值是0</td>
+</tr>
+<tr>
+<td>extraData</td>
+<td>附加信息，随便填，可以填你的个性信息</td>
+</tr>
+<tr>
+<td>gasLimit</td>
+<td>该值设置对GAS的消耗总量限制，用来限制区块能包含的交易信息总和，因为我们是私有链，所以填最大。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="初始化区块链"><a href="#初始化区块链" class="headerlink" title="初始化区块链"></a>初始化区块链</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd privatechain</span><br><span class="line">geth --datadir data0 init genesis.json</span><br></pre></td></tr></table></figure>
+<p><code>--datadir</code> 选项后面跟一个目录名，这里为 data0，表示指定数据存放目录为 data0，genesis.json 是 <code>init</code> 命令的参数。 </p>
+<p><img src="/1530692029244.png" alt="1530692029244"></p>
+<h3 id="启动区块链"><a href="#启动区块链" class="headerlink" title="启动区块链"></a>启动区块链</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">geth --identity &quot;TestNode&quot; --networkid &quot;99&quot; --rpc --rpccorsdomain &quot;*&quot; --rpcapi &quot;db,eth,net,web3&quot; --rpcport &quot;8545&quot; --datadir data0 --port &quot;30303&quot; --nodiscover console</span><br></pre></td></tr></table></figure>
+<p><img src="/1530771728423.png" alt="1530771728423"></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identity</td>
+<td>区块链的标示，随便填写，用于标示目前网络的名字</td>
+</tr>
+<tr>
+<td>init</td>
+<td>指定创世块文件的位置，并创建初始块</td>
+</tr>
+<tr>
+<td>datadir</td>
+<td>设置当前区块链网络数据存放的位置</td>
+</tr>
+<tr>
+<td>port</td>
+<td>网络监听端口</td>
+</tr>
+<tr>
+<td>rpc</td>
+<td>启动rpc通信，可以进行智能合约的部署和调试</td>
+</tr>
+<tr>
+<td>rpcapi</td>
+<td>设置允许连接的rpc的客户端，一般为db,eth,net,web3</td>
+</tr>
+<tr>
+<td>networkid</td>
+<td>设置当前区块链的网络ID，用于区分不同的网络，是一个数字</td>
+</tr>
+<tr>
+<td>console</td>
+<td>启动命令行模式，可以在Geth中执行命令</td>
+</tr>
+</tbody>
+</table>
+<h3 id="智能合约部署与调用"><a href="#智能合约部署与调用" class="headerlink" title="智能合约部署与调用"></a>智能合约部署与调用</h3><h4 id="创建账号、挖矿"><a href="#创建账号、挖矿" class="headerlink" title="创建账号、挖矿"></a>创建账号、挖矿</h4><ul>
+<li>创建账号personal.newAccount(),创建的第一个账号为默认coinbase账号，挖矿收入将会进入此账号。‘</li>
+<li>由于部署合约需要以太坊，使用miner.start()开始挖矿，miner.stop停止挖矿。</li>
+<li>eth.getBalance(eth.accounts[0])查看余额</li>
+</ul>
+<h4 id="创建编译智能合约"><a href="#创建编译智能合约" class="headerlink" title="创建编译智能合约"></a>创建编译智能合约</h4><ul>
+<li><p>安装Solidity编译器solc： apt-get install solc</p>
+</li>
+<li><p>新建一个 Solidity 智能合约文件，命名为 <code>testContract.sol</code>，该合约包含一个方法 <code>multiply()</code>，将输入的两个数相乘后输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.4.0;</span><br><span class="line">contract testContract &#123;</span><br><span class="line">    function multiply(uint a) returns(uint d) &#123;</span><br><span class="line">        d = a * 7;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译智能合约，获得编译后的 EVM 二进制码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ solc --bin testContract.sol</span><br><span class="line"></span><br><span class="line">======= testContract.sol:TestContract =======</span><br><span class="line">Binary:</span><br><span class="line">608060405234801561001057600080fd5b5060bb8061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b348015604f57600080fd5b50606c600480360381019080803590602001909291905050506082565b6040518082815260200191505060405180910390f35b60006007820290509190505600a165627a7a7230582002bc42ae50877423d8703fb9201f4e02d335ff56443e697a4c0d9de0dfe6ad160029</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再用 solc 获取智能合约的 JSON ABI（Application Binary Interface），其中指定了合约接口，包括可调用的合约方法、变量、事件等：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ solc --abi testContract.sol</span><br><span class="line"></span><br><span class="line">======= testContract.sol:TestContract =======</span><br><span class="line">Contract JSON ABI</span><br><span class="line">[&#123;&quot;constant&quot;:false,&quot;inputs&quot;:[&#123;&quot;name&quot;:&quot;a&quot;,&quot;type&quot;:&quot;uint256&quot;&#125;],&quot;name&quot;:&quot;multiply&quot;,&quot;outputs&quot;:[&#123;&quot;name&quot;:&quot;d&quot;,&quot;type&quot;:&quot;uint256&quot;&#125;],&quot;payable&quot;:false,&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;&#125;]</span><br></pre></td></tr></table></figure>
+<p><img src="/1530762830490.png" alt="1530762830490"></p>
+</li>
+<li><p>回到 Geth 的控制台，用变量 <code>code</code> 和 <code>abi</code> 记录上面两个值，注意在 code 前加上 <code>0x</code> 前缀：</p>
+<p><img src="/1530762753406.png" alt="1530762753406"></p>
+</li>
+</ul>
+<h4 id="部署智能合约"><a href="#部署智能合约" class="headerlink" title="部署智能合约"></a>部署智能合约</h4><ul>
+<li><p>这里使用账户 0 来部署合约，首先解锁账户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; personal.unlockAccount(eth.accounts[0])</span><br><span class="line">Unlock account 0xfb9c00a44223e463016f0b36e1195d2d7a21e0d7</span><br><span class="line">Passphrase:</span><br><span class="line">true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送部署合约的交易：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; myContract = eth.contract(abi)</span><br><span class="line">...</span><br><span class="line">&gt; contract = myContract.new(&#123;from:eth.accounts[0],data:code,gas:1000000&#125;)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时如果没有挖矿，用 <code>txpool.status</code> 命令可以看到本地交易池中有一个待确认的交易。使用下面的命令查看当前待确认的交易：</p>
+<p><img src="/1530762947706.png" alt="1530762947706"></p>
+<p>使用 <code>miner.start()</code> 命令开始挖矿，一段时间后交易会被确认，随新区块进入区块链。</p>
+<p><img src="/1530766370261.png" alt="1530766370261"></p>
+</li>
+</ul>
+<h4 id="调用智能合约"><a href="#调用智能合约" class="headerlink" title="调用智能合约"></a>调用智能合约</h4><p>  使用以下命令发送交易，<code>sendTransaction</code> 方法的前几个参数应该与合约中 <code>multiply</code> 方法的输入参数对应。这种情况下，交易会通过挖矿记录到区块链中：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; contract.multiply.sendTransaction(10, &#123;from:eth.accounts[0]&#125;)</span><br></pre></td></tr></table></figure>
+<p>  如果只是本地运行该方法查看返回结果，可以采用如下方式：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; contract.multiply.call(10)</span><br><span class="line">70</span><br></pre></td></tr></table></figure>
+<p>  <img src="/1530766649199.png" alt="1530766649199"></p>
+<h3 id="查看节点信息和节点列表"><a href="#查看节点信息和节点列表" class="headerlink" title="查看节点信息和节点列表"></a>查看节点信息和节点列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin.nodeInfo // 查看节点信息</span><br><span class="line">admin.peers // 查看节点列表</span><br></pre></td></tr></table></figure>
+<p><img src="/1530694981280.png" alt="1530694981280"></p>
+<h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><p>如果希望多个节点加入到同一个区块链网络，需要注意以下三点</p>
+<ul>
+<li>节点所在的机器，相互之间可以互联互通</li>
+<li>它们有相同的创世纪文件</li>
+<li>有相同的<code>networkid</code></li>
+</ul>
+<p>第二个节点networkid设置必须与前一致，rpcport 、port不一样。</p>
+<p><img src="/1530696540314.png" alt="1530696540314"></p>
+<p><img src="/1530699886655.png" alt="1530699886655"></p>
+<ul>
+<li>在节点1使用<code>admin.addPeer(encode)</code>命令添加节点2，节点2<code>enode</code>为</li>
+</ul>
+<p>“enode://f547fd8925e44fc89c7f71af94ba4d5d8b52e28b4b68cc54fcc5d57be837b24170d1710e884e8be783ac9f07ee35e5c77f2325ba7a5194f53671e7ecd069a365@192.168.213.188:30304”</p>
+<ul>
+<li>使用<code>admin.peers</code>查看节点</li>
+</ul>
+<p><img src="/1530701692797.png" alt="1530701692797"></p>
+<ul>
+<li>连接成功后节点2同步区块</li>
+</ul>
+<p><img src="/1530770536341.png" alt="1530770536341"></p>
+<ul>
+<li><p>节点一中发布交易，看到pending：2</p>
+<p><img src="/1530770844338.png" alt="1530770844338"></p>
+</li>
+<li><p>任一节点miner.start()挖矿，其余节点自动同步新区块，且交易被记录进区块。</p>
+</li>
+</ul>
+<p><img src="/1530775904444.png" alt="1530775904444"></p>
+<p><img src="/1530775911979.png" alt="1530775911979"></p>
+<p>控制台操作</p>
+<p>进入以太坊 Javascript Console 后，就可以使用里面的内置对象做一些操作，这些内置对象提供的功能很丰富，比如查看区块和交易、创建账户、挖矿、发送交易、部署智能合约等。</p>
+<p>常用命令有：</p>
+<ul>
+<li>personal.newAccount()：创建账户；</li>
+<li>personal.unlockAccount()：解锁账户；</li>
+<li>eth.accounts：枚举系统中的账户；</li>
+<li>eth.getBalance()：查看账户余额，返回值的单位是 Wei（Wei 是以太坊中最小货币面额单位，类似比特币中的<code>聪</code>，1 ether = 10^18 Wei）；</li>
+<li>eth.blockNumber：列出区块总数；</li>
+<li>eth.getTransaction()：获取交易；</li>
+<li>eth.getBlock()：获取区块；</li>
+<li>miner.start()：开始挖矿；</li>
+<li>miner.stop()：停止挖矿；</li>
+<li>web3.fromWei()：Wei 换算成以太币；</li>
+<li>web3.toWei()：以太币换算成 Wei；</li>
+<li>txpool.status：交易池中的状态；</li>
+<li>admin.addPeer()：连接到其他节点； </li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Anduin WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Anduin Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/12/Blockchain/以太坊基本概念/" rel="next" title="以太坊基本概念">
+                <i class="fa fa-chevron-left"></i> 以太坊基本概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Anduin" />
+            
+              <p class="site-author-name" itemprop="name">Anduin</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端geth安装"><span class="nav-number">1.</span> <span class="nav-text">客户端geth安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建私有链"><span class="nav-number">2.</span> <span class="nav-text">搭建私有链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始状态文件genesis-json"><span class="nav-number">2.1.</span> <span class="nav-text">初始状态文件genesis.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化区块链"><span class="nav-number">2.2.</span> <span class="nav-text">初始化区块链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动区块链"><span class="nav-number">2.3.</span> <span class="nav-text">启动区块链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#智能合约部署与调用"><span class="nav-number">2.4.</span> <span class="nav-text">智能合约部署与调用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建账号、挖矿"><span class="nav-number">2.4.1.</span> <span class="nav-text">创建账号、挖矿</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建编译智能合约"><span class="nav-number">2.4.2.</span> <span class="nav-text">创建编译智能合约</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署智能合约"><span class="nav-number">2.4.3.</span> <span class="nav-text">部署智能合约</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调用智能合约"><span class="nav-number">2.4.4.</span> <span class="nav-text">调用智能合约</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看节点信息和节点列表"><span class="nav-number">2.5.</span> <span class="nav-text">查看节点信息和节点列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加节点"><span class="nav-number">2.6.</span> <span class="nav-text">添加节点</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Anduin</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">17.7k</span>
+  
+</div>
+
+
+<!-- <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+-->
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> Visitor
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> Total Visit
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '<%= page.title %>', 
+            owner: 'AnduinWrynn',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '5e2068bddf82e9cec05fbf1f7f4d3113a26a0072',
+            
+                client_id: '23187f36d302e129572d'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("dYmovDM6XuQJN4n6yCXmIocF-gzGzoHsz", "uIoS715AvlMjTL7DUFfuS0QH");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
